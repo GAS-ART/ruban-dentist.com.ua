@@ -1,0 +1,617 @@
+@charset "UTF-8";
+/*
+@include adaptiveValue("свойство", начальное значение, конечное значение);
+Где:
+
+свойство — CSS-свойство, значение которого нужно адаптировать. Можно указать любое свойство значение которого указывается в цифрах.
+начальное значение — стартовое значение свойства в пикселях, пишем число без px. Обычно указывается по макету.
+конечное значение — финальное значение свойства в пикселях, пишем число без px. Значение, к которому мы хотим прийти на меньших ширинах экрана.
+Примеры:
+
+@include adaptiveValue("font-size", 50, 20);
+@include adaptiveValue("padding-top", 80, 10);
+...
+Алгоритм работы миксина
+Миксин работает на основе значений переменных $minWidth, $maxWidth, $maxWidthContainer, $containerPadding и $containerWidth расположеных в блоке «Настройка адаптивной сетки» файла scss/style.scss
+
+В итоге, по умолчанию, миксин будет работать следующим образом:
+
+Если $maxWidthContainer больше нуля, то значения свойства будут меняться в промежутке ширин от $containerWidth до $minWidth. То есть, по всей ширине ограничивающего контейнера.
+
+При этом, если ширина экрана больше чем $containerWidth, то значение свойства будет равно начальному значению. Если ширина экрана меньше чем $minWidth, то значение свойства будет равно конечному значению.
+
+Если $maxWidthContainer равен нулю, то значения свойства будут меняться в промежутке ширин от $maxWidth до $minWidth. То есть, по всей ширине экрана (вьюпорта).
+
+Дополнительные настройки и режимы работы
+Миксин позволяет указать свой промежуток ширины внутри которого будет адаптироваться значение свойства.
+
+@include adaptiveValue("свойство", начальное значение, конечное значение, ширина от, ширина до); 
+ширина от — стартовая ширина меньше которой начнется адаптация, пишем число без px.
+ширина до — конечная ширина до которой будет адаптироваться значение свойства, пишем число без px.
+Пример:
+
+@include adaptiveValue("font-size", 50, 20, 800, 480);
+
+
+
+режим работы — может принимать числовые значения 1, 2 или 3:
+
+1 — Если ширина экрана больше чем ширина от, то значение свойства будет равно начальному значению. Если ширина экрана меньше чем ширина до, то значение свойства будет равно конечному значению.
+2 — Если ширина экрана больше чем ширина от, то значение свойства будет равно начальному значению. Если ширина экрана меньше чем ширина до, то значение свойства будет по умолчанию либо наследоваться от предков.
+3 — Если ширина экрана больше чем ширина от, то значение свойства будет по умолчанию либо наследоваться от предков. Если ширина экрана меньше чем ширина до, то значение свойства будет равно конечному значению.
+
+
+Пример:
+
+@include adaptiveValue("font-size", 50, 20, 800, 480, 1);
+Также мы можем использовать несколько вызовов миксина с разными промежутками:
+
+@include adaptiveValue("font-size", 50, 20, 800, 480, 2);
+@include adaptiveValue("font-size", 20, 10, 480, 320);
+В примере произойдет следующее: значение font-size будет 50px, в промежутке ширин экрана от 800px до 480px, он будет отзывчиво адаптироваться от 50px до 20px. А в промежутке от 480px до 320px отзывчиво адаптироваться от 20px до 10px.
+*/
+@font-face {
+  font-family: icons;
+  font-display: swap;
+  src: url("/fonts/icons.woff2") format("woff2"), url("/fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: SofiaSans;
+  font-display: swap;
+  src: url("/fonts/SofiaSans.woff2") format("woff2"), url("/fonts/SofiaSans.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Sofia;
+  font-display: swap;
+  src: url("/fonts/Sofia.woff2") format("woff2"), url("/fonts/Sofia.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+
+body {
+  color: #1B1D1F;
+  line-height: 1;
+  font-family: "Roboto";
+  font-size: 1rem;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea {
+  font-family: "Roboto";
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+body.lock {
+  overflow: hidden;
+  touch-action: none;
+}
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.wrapper > main {
+  flex: 1 1 auto;
+}
+.wrapper > * {
+  min-width: 0;
+}
+
+/*
+(i) Стили будут применяться ко 
+всем классам содержащим *__container
+Например header__container, main__container и т.д.
+Снипет (HTML): cnt
+*/
+[class*=__container] {
+  max-width: 71.875rem;
+  box-sizing: content-box;
+  margin: 0 auto;
+  padding: 0 0.9375rem;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+.header__wraper {
+  height: 93px;
+}
+.header__container {
+  height: 100%;
+}
+.header__items {
+  display: grid;
+  grid-template-columns: minmax(275px, 420px) minmax(290px, 490px) minmax(220px, 274px);
+}
+@media (max-width: 47.99875em) {
+  .header__items {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.header__item {
+  display: flex;
+  margin-top: 29px;
+}
+
+.header-logo {
+  z-index: 200;
+}
+@supports (padding-left: clamp( 0.625rem , -29.3856382979rem  +  48.4042553191vw , 6.3125rem )) {
+  .header-logo {
+    padding-left: clamp( 0.625rem , -29.3856382979rem  +  48.4042553191vw , 6.3125rem );
+  }
+}
+@supports not (padding-left: clamp( 0.625rem , -29.3856382979rem  +  48.4042553191vw , 6.3125rem )) {
+  .header-logo {
+    padding-left: calc(
+         0.625rem + 5.6875 * (100vw - 62rem) / 11.75
+      );
+  }
+}
+@media (max-width: 62em) {
+  .header-logo {
+    padding-left: inherit;
+  }
+}
+@media (max-width: 29.99875em) {
+  .header-logo {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.header-logo__logo {
+  margin-right: 5px;
+  position: relative;
+  width: 52px;
+  height: 54px;
+}
+.header-logo__logo img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 47.56px;
+  height: 52.77px;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+@media (max-width: 29.99875em) {
+  .header-logo__logo {
+    width: 26px;
+    height: 27px;
+  }
+  .header-logo__logo img {
+    width: 24px;
+    height: 26px;
+  }
+}
+.header-logo__text {
+  color: #46B1DE;
+  margin-top: 6px;
+  line-height: 140%;
+  white-space: nowrap;
+}
+.header-logo__text-name {
+  font-family: "Sofia";
+  font-style: normal;
+  font-weight: 400;
+  opacity: 0.6;
+  letter-spacing: -0.269px;
+}
+@supports (font-size: clamp( 1rem , 0.5535714286rem  +  2.2321428571vw , 1.625rem )) {
+  .header-logo__text-name {
+    font-size: clamp( 1rem , 0.5535714286rem  +  2.2321428571vw , 1.625rem );
+  }
+}
+@supports not (font-size: clamp( 1rem , 0.5535714286rem  +  2.2321428571vw , 1.625rem )) {
+  .header-logo__text-name {
+    font-size: calc(
+         1rem + 0.625 * (100vw - 20rem) / 28
+      );
+  }
+}
+@media (min-width: 48em) {
+  .header-logo__text-name {
+    font-size: inherit;
+  }
+}
+.header-logo__text-status {
+  font-family: "Sofia";
+  letter-spacing: 0.8px;
+}
+@supports (font-size: clamp( 0.875rem , 0.6964285714rem  +  0.8928571429vw , 1.125rem )) {
+  .header-logo__text-status {
+    font-size: clamp( 0.875rem , 0.6964285714rem  +  0.8928571429vw , 1.125rem );
+  }
+}
+@supports not (font-size: clamp( 0.875rem , 0.6964285714rem  +  0.8928571429vw , 1.125rem )) {
+  .header-logo__text-status {
+    font-size: calc(
+         0.875rem + 0.25 * (100vw - 20rem) / 28
+      );
+  }
+}
+@media (min-width: 48em) {
+  .header-logo__text-status {
+    font-size: inherit;
+  }
+}
+
+.header-menu {
+  margin-top: 37px;
+}
+@media (max-width: 47.99875em) {
+  .header-menu {
+    display: none;
+  }
+}
+.header-menu__link {
+  line-height: 1.1875;
+  color: #1B1D1F;
+}
+@supports (margin-right: clamp( 0.9375rem , -1.3925970874rem  +  4.854368932vw , 2.1875rem )) {
+  .header-menu__link:not(:last-child) {
+    margin-right: clamp( 0.9375rem , -1.3925970874rem  +  4.854368932vw , 2.1875rem );
+  }
+}
+@supports not (margin-right: clamp( 0.9375rem , -1.3925970874rem  +  4.854368932vw , 2.1875rem )) {
+  .header-menu__link:not(:last-child) {
+    margin-right: calc(
+         0.9375rem + 1.25 * (100vw - 48rem) / 25.75
+      );
+  }
+}
+
+.header-actions {
+  z-index: 200;
+  margin-top: 37px;
+}
+@media (max-width: 61.99875em) {
+  .header-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 61.99875em) {
+  .header-actions__row:first-child {
+    order: 1;
+  }
+  .header-actions__row:nth-child(2) {
+    order: 3;
+  }
+  .header-actions__row:last-child {
+    order: 2;
+  }
+}
+@media (max-width: 47.99875em) {
+  .header-actions__row:nth-child(3) {
+    margin-bottom: 10px;
+  }
+}
+.header-actions__phone {
+  margin-right: 23px;
+  position: relative;
+  color: #1B1D1F;
+  line-height: 1.1875;
+  white-space: nowrap;
+  transition: color 0.3s ease 0s;
+}
+.header-actions__phone.white {
+  color: #ffffff;
+}
+@media (max-width: 47.99875em) {
+  .header-actions__phone {
+    margin-right: 0;
+  }
+}
+.header-actions__phone::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 20px;
+  height: 20px;
+  background-image: url("/img/icons/phone.jpg");
+}
+@media (max-width: 61.99875em) {
+  .header-actions__phone::before {
+    display: none;
+  }
+}
+.header-actions__lang {
+  color: #000000;
+  line-height: 1.2;
+  font-size: 20px;
+  transition: color 0.3s ease 0s;
+}
+.header-actions__lang.white {
+  color: #ffffff;
+}
+.header-actions__lang:not(:last-child) {
+  margin-right: 7px;
+}
+.header-actions__separator {
+  line-height: 1.2;
+  font-size: 20px;
+  position: relative;
+  top: -1px;
+  margin-right: 7px;
+  color: #000000;
+  cursor: default;
+  transition: color 0.3s ease 0s;
+}
+.header-actions__separator.white {
+  color: #ffffff;
+}
+
+.header__menu {
+  position: absolute;
+  overflow: hidden;
+  right: 0;
+  top: 0;
+  width: 180px;
+  height: 100vh;
+  background-color: #A1C7D4;
+  transform: translate(100%);
+  z-index: 100;
+  transition: transform 0.3s ease 0s;
+}
+@media (min-width: 47.99875em) {
+  .header__menu {
+    display: none;
+  }
+}
+.header__menu.open {
+  transform: translate(0);
+}
+
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50vh;
+  transform: translate(0, -50%);
+}
+.menu__item {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 500;
+}
+.menu__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.icon-menu {
+  z-index: 200;
+  display: none;
+}
+@media (max-width: 29.99875em) {
+  .icon-menu {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+@media (max-width: 47.99875em) {
+  .icon-menu {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 18px;
+    top: -15px;
+    cursor: pointer;
+  }
+  .icon-menu span, .icon-menu::before, .icon-menu::after {
+    content: "";
+    transition: all 0.3s ease 0s;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+  }
+  .icon-menu::before {
+    top: 0px;
+  }
+  .icon-menu::after {
+    bottom: 0px;
+  }
+  .icon-menu span {
+    top: calc(50% - 1px);
+  }
+  .icon-menu.open span {
+    transform: scale(0);
+  }
+  .icon-menu.open::before {
+    transform: rotate(-45deg);
+    top: calc(50% - 1px);
+    background-color: #ffffff;
+  }
+  .icon-menu.open::after {
+    transform: rotate(45deg);
+    bottom: calc(50% - 1px);
+    background-color: #ffffff;
+  }
+}
+
+.page-404 {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 220px 0 30px 0;
+}
+@media (max-width: 29.99875em) {
+  .page-404 {
+    margin: 126px 0 20px 0;
+  }
+}
+.page-404__body {
+  text-align: center;
+}
+.page-404__tittle {
+  margin-bottom: 15px;
+}
+@supports (font-size: clamp( 3.375rem , 0.4447674419rem  +  14.6511627907vw , 11.25rem )) {
+  .page-404__tittle {
+    font-size: clamp( 3.375rem , 0.4447674419rem  +  14.6511627907vw , 11.25rem );
+  }
+}
+@supports not (font-size: clamp( 3.375rem , 0.4447674419rem  +  14.6511627907vw , 11.25rem )) {
+  .page-404__tittle {
+    font-size: calc(
+         3.375rem + 7.875 * (100vw - 20rem) / 53.75
+      );
+  }
+}
+.page-404__text {
+  margin-bottom: 30px;
+}
+@supports (font-size: clamp( 1.125rem , 0.613372093rem  +  2.5581395349vw , 2.5rem )) {
+  .page-404__text {
+    font-size: clamp( 1.125rem , 0.613372093rem  +  2.5581395349vw , 2.5rem );
+  }
+}
+@supports not (font-size: clamp( 1.125rem , 0.613372093rem  +  2.5581395349vw , 2.5rem )) {
+  .page-404__text {
+    font-size: calc(
+         1.125rem + 1.375 * (100vw - 20rem) / 53.75
+      );
+  }
+}
+.page-404__button {
+  font-family: "Roboto";
+  color: #46B1DE;
+}
+@supports (font-size: clamp( 1.125rem , 0.8459302326rem  +  1.3953488372vw , 1.875rem )) {
+  .page-404__button {
+    font-size: clamp( 1.125rem , 0.8459302326rem  +  1.3953488372vw , 1.875rem );
+  }
+}
+@supports not (font-size: clamp( 1.125rem , 0.8459302326rem  +  1.3953488372vw , 1.875rem )) {
+  .page-404__button {
+    font-size: calc(
+         1.125rem + 0.75 * (100vw - 20rem) / 53.75
+      );
+  }
+}
+.page-404__button a {
+  position: relative;
+}
+.page-404__button a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background: #A1C7D4;
+  transition: width 0.3s ease-in-out;
+}
+.page-404__button a:hover::after {
+  width: 100%;
+}
+
+[class*=_icon-]:before {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class*=_icon-]:before {
+  display: block;
+}
+
+._icon-instagram:before {
+  content: "\e900";
+}
+
+._icon-mail:before {
+  content: "\e901";
+}
+
+._icon-phone:before {
+  content: "\e902";
+}
+
+.test {
+  color: #46B1DE;
+}
