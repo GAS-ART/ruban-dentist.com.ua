@@ -45,7 +45,25 @@ window.onload = function () {
       return lang.classList.toggle('white');
     });
     langsSeparator.classList.toggle('white');
-  });
+  }); //logo actions
+
+  var logo = document.querySelector('.header-logo__logo');
+  var logoText = document.querySelector('.header-logo__text');
+
+  if (window.matchMedia("(pointer: fine)").matches) {
+    logo.addEventListener('mouseenter', function () {
+      logoText.classList.add('active');
+    });
+    logo.addEventListener('mouseleave', function () {
+      logoText.classList.remove('active');
+    });
+    logoText.addEventListener('mouseenter', function () {
+      logo.classList.add('active');
+    });
+    logoText.addEventListener('mouseleave', function () {
+      logo.classList.remove('active');
+    });
+  }
 };
 
 /***/ }),

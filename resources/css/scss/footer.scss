@@ -1,6 +1,96 @@
 //====================================================================================================
 .footer {
+   background-color: $paleBlue;
 
+   &__container {
+      display: flex;
+      justify-content: space-between;
+      white-space: nowrap;
+      @media (max-width: $mobile) {
+         flex-direction: column;
+         justify-content: left;
+      }
+   }
+
+   &__text {
+      @include adaptiveValueREM('margin-left', 105, 0, 1180, 768, 1);
+      margin-top: 33px;
+   }
+
+   &__contacts {
+      @include adaptiveValueREM('margin-right', 105, 0, 1180, 768, 1);
+      margin-top: 52px;
+      display: flex;
+      flex-direction: column;
+      @media (max-width: $mobile) {
+      margin-top: 15px;
+      }
+   }
+}
+.text-footer {
+
+   &__contacts {
+      font-weight: 600;
+      font-size: 34px;
+      @include adaptiveValueREM('font-size', 34, 18);
+      line-height: 1.1765;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+   }
+
+   &__name {
+      @include adaptiveValueREM('font-size', 20, 16);
+      line-height: 135%;
+      margin-bottom: 16px;
+   }
+
+   &__city {
+      @include adaptiveValueREM('font-size', 20, 16);
+      line-height: 135%;
+      color: #000000;
+   }
+}
+.contact-footer {
+
+   &__contact {
+      position: relative;
+      width: min-content;
+      &:not(:last-child){
+         height: 27px;
+         display: flex;
+         align-items: center;
+      }
+      &:not(:nth-child(3)){
+      margin-bottom: 16px;
+      }
+      &:nth-child(3){
+         margin-bottom: 27px;
+      }
+      &::before{
+         position: absolute;
+         top: 0;
+         left: -42px;
+         font-size: 27px;
+      }
+      transition: all 0.3s ease 0s;
+      @media (pointer: fine) {
+      &:hover {
+         color: #FFFFFF;
+      }
+      }
+      @media (max-width: $mobile) {
+         left: 40px;
+      }
+   }
+  
+
+   &__copiright {
+      text-align: right;
+      font-size: 13px;
+      line-height: 130%;
+      color: #FFFFFF;
+      margin-bottom: 9px;
+   }
 }
 
 //====================================================================================================

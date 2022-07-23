@@ -4,13 +4,13 @@
       <div class="header__container">
          <div class="header__items">
             <div class="header__item header-logo">
-               <div class="header-logo__logo">
+               <a href="{{ route('index.lang', ['locale' => __('lang.current')]) }}" class="header-logo__logo">
                   <img src="{{asset('/img/logo.png')}}" alt="Досктор стаматолог Татьяна Рубан">
-               </div>
-               <div class="header-logo__text">
+               </a>
+               <a href="{{ route('index.lang', ['locale' => __('lang.current')]) }}" class="header-logo__text">
                   <div class="header-logo__text-name">DR. TANYA RUBAN</div>
                   <div class="header-logo__text-status">dentist</div>
-               </div>
+               </a>
             </div>
             <nav class="header__item header-menu">
                <a class="header-menu__link" href="#">Преимущества</a>
@@ -22,7 +22,7 @@
                   <span></span>
                </div>
                <div class="header-actions__row">
-                  <a class="header-actions__phone" href="tel:%2B0956664748">+38 (095) 666-47-48</a>
+                  <a class="header-actions__phone _icon-phone" href="tel:%2B0956664748">+38 (095) 666-47-48</a>
                </div>
                <div class="header-actions__row">
                   <a class="header-actions__lang" href="{{ route('locale', __('lang.ua')) }}">UA</a>

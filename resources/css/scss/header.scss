@@ -41,6 +41,15 @@ z-index: 100;
       position: relative;
       width: 52px;
       height: 54px;
+      transition: all 0.3s ease 0s;
+     @media (pointer: fine) {
+      &:hover {
+        transform: rotate(360deg) scale(1.2);
+      }
+     }
+     &.active{
+      transform: rotate(360deg) scale(1.2);
+     }
       img {
       position: relative;
       top: 0;
@@ -64,22 +73,45 @@ z-index: 100;
       margin-top: 6px;
       line-height: 140%;
       white-space: nowrap;
+      transition: all 0.5s ease 0s;
+      @media (pointer: fine) {
+      &:hover {
+         .header-logo__text-name{
+            opacity: 1;
+            font-size: 1.5rem;
+         }
+         .header-logo__text-status{
+            font-size: 1.5rem;
+         }
+      }
+      }
+      &.active{
+         .header-logo__text-name{
+            opacity: 1;
+            font-size: 1.5rem;
+         }
+         .header-logo__text-status{
+            font-size: 1.5rem;
+         }
+        }
    }
    &__text-name {
       font-family: 'Sofia';
       //font-size: 26px;
-      @include adaptiveValueREM('font-size', 26, 16, 768, 320);
+      @include adaptiveValueREM('font-size', 26, 16, 768, 320, 1);
       font-style: normal;
       font-weight: 400;
       opacity: 0.6;
       letter-spacing: -0.269px;
+      transition: all 0.3s ease 0s;
    }
 
    &__text-status {
       //font-size: 18px;
-      @include adaptiveValueREM('font-size', 18, 14, 768, 320);
+      @include adaptiveValueREM('font-size', 18, 14, 768, 320, 1);
       font-family: 'Sofia';
       letter-spacing: 0.8px;
+      transition: all 0.3s ease 0s;
    }
 }
 .header-menu {
@@ -89,7 +121,14 @@ z-index: 100;
    }  
    &__link {
       line-height: 1.1875;
+      height: min-content;
       color: $mainColor;
+      transition: color 0.3s ease 0s;
+      @media (pointer: fine) {
+         &:hover {
+          color: $blue;
+         }
+         }
       &:not(:last-child){
          @include adaptiveValueREM('margin-right', 35, 15, 1180, 768, 1);
       }
@@ -105,6 +144,7 @@ z-index: 100;
       justify-content: center;
       }
    &__row{
+      cursor: default;
      @media (max-width: $tablet) {
          &:first-child{
             order: 1;
@@ -132,6 +172,11 @@ z-index: 100;
       &.white{
          color: #ffffff;
       }
+      @media (pointer: fine) {
+      &:hover {
+       color: $blue;
+      }
+      }
       @media (max-width: $mobile) {
          margin-right: 0;
       }
@@ -140,9 +185,8 @@ z-index: 100;
          position: absolute;
          top: 0;
          left: -20px;
-         width: 20px;
-         height: 20px;
-         background-image: url('/img/icons/phone.jpg');
+         width: 18px;
+         height: 18px;
          @media (max-width: $tablet) {
          display: none;
          }
@@ -153,6 +197,11 @@ z-index: 100;
       line-height: 1.2;
       font-size: 20px;
       transition: color 0.3s ease 0s;
+      @media (pointer: fine) {
+         &:hover {
+         color: $blue;
+         }
+      }
       &.white{
          color: #ffffff;
       }
