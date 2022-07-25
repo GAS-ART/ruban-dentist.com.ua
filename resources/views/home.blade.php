@@ -52,5 +52,66 @@
       </div>
    </div>
 </section>
-
+<section class="why-me">
+   <div class="why-me__container">
+      <h2 class="why-me__title">ПОЧЕМУ СТОИТ ВЫБРАТЬ <span>ИМЕННО МЕНЯ?</span></h2>
+      <div class="why-me__text">Профессиональный стаж более 15 лет! Моими услугами воспользовались более
+         2000 человек! Более 70% пациентов обращаются по рекомендации</div>
+      <div class="why-me__advantages me-advantages">
+         <div class="me-advantages__row">
+            <div class="me-advantages__card card-advantage">
+               <div class="card-advantage__title">
+                  <div class="card-advantage__number">01</div>
+                  <div class="card-advantage__text">СОВРЕМЕННОЕ ОБОРУДОВАНИЕ</div>
+               </div>
+               <div class="card-advantage__content">Использую исключительно обновленное и самое передовое оборудование –
+                  все для здоровья моих пациентов</div>
+            </div>
+            <div class="me-advantages__card card-advantage">
+               <div class="card-advantage__title">
+                  <div class="card-advantage__number">02</div>
+                  <div class="card-advantage__text">ИНТЕРЕСЫ КЛИЕНТА ПРЕВЫШЕ ВСЕГО</div>
+               </div>
+               <div class="card-advantage__content">Моя задача: подобрать удобное для Вас время и построить
+                  индивидуальный план лечения</div>
+            </div>
+         </div>
+         <div class="me-advantages__row">
+            <div class="me-advantages__card card-advantage">
+               <div class="card-advantage__title">
+                  <div class="card-advantage__number">03</div>
+                  <div class="card-advantage__text">ПРОФЕССИОНАЛЬНЫЙ СТОМАТОЛОГ</div>
+               </div>
+               <div class="card-advantage__content">Имею большой опыт работы и каждый год повышаю квалификацию</div>
+            </div>
+            <div class="me-advantages__card card-advantage">
+               <div class="card-advantage__title">
+                  <div class="card-advantage__number">04</div>
+                  <div class="card-advantage__text">ЛЕЧЕНИЕ ЗУБОВ БЕЗ БОЛИ И СТРАХА</div>
+               </div>
+               <div class="card-advantage__content">Использую качественные анестетики, чтобы совсем не чувствовали боли
+               </div>
+            </div>
+         </div>
+         <div class="me-advantages__row">
+            <div class="me-advantages__card card-advantage">
+               <div class="card-advantage__title">
+                  <div class="card-advantage__number">05</div>
+                  <div class="card-advantage__text">КОМФОРТНАЯ И УЮТНАЯ ОБСТАНОВКА</div>
+               </div>
+               <div class="card-advantage__content">Создали очень уютную
+                  и дружелюбную обстановку, чтобы Вы чувствовали себя как дома</div>
+            </div>
+            <div class="me-advantages__card card-advantage">
+               <div class="card-advantage__title">
+                  <div class="card-advantage__number">06</div>
+                  <div class="card-advantage__text">ПЕРВАЯ КОНСУЛЬТАЦИЯ БЕСПЛАТНА</div>
+               </div>
+               <div class="card-advantage__content">Вы получите полную диагностику,
+                  а также мы разработаем полный индивидуальный план лечения</div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
 @endsection

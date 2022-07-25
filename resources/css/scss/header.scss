@@ -1,16 +1,28 @@
 //====================================================================================================
 .header {
-   position: fixed;
+   position: relative;
 top: 0;
 left: 0;
 width: 100%;
 z-index: 100;
+&._scroll{
+   .header__wraper{
+      background-color: $paleBlue;
+   }
+}
    &__wraper {
-      height: 93px;
+      position: fixed;
+      height: 85px;
+      z-index: 100;
+      width: 100%;
+      transition: all 0.5s ease 0s;
+      @media (max-width: $mobile) {
+         height: 115px;
+      }
    }
 
    &__container {
-      height: 100%;
+      
    }
    
 
@@ -145,6 +157,10 @@ z-index: 100;
       }
    &__row{
       cursor: default;
+      position: relative; 
+      &:nth-child(3){
+         top: -2px;
+      }
      @media (max-width: $tablet) {
          &:first-child{
             order: 1;
@@ -266,6 +282,7 @@ z-index: 100;
       color: #ffffff;
       font-size: 24px;
       font-weight: 500;
+      
       &:not(:last-child){
       margin-bottom: 20px;
       }

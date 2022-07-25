@@ -25,6 +25,7 @@ class languagesController extends Controller
                 }
             }
         } else if ( Str::contains($url, '/') ) {
+            $url = str_replace('/locale', '', $url);
             return redirect($url . $locale);
         }
     }

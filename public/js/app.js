@@ -63,7 +63,21 @@ window.onload = function () {
     logoText.addEventListener('mouseleave', function () {
       logo.classList.remove('active');
     });
+  } //Прокрутка header
+
+
+  var headerElement = document.querySelector('.header');
+
+  function watchHeader(entries) {
+    if (entries[0].isIntersecting) {
+      entries[0].target.classList.remove('_scroll');
+    } else {
+      entries[0].target.classList.add('_scroll');
+    }
   }
+
+  var headerObserver = new IntersectionObserver(watchHeader);
+  headerObserver.observe(headerElement);
 };
 
 /***/ }),
