@@ -114,4 +114,48 @@
       </div>
    </div>
 </section>
+<section class="services">
+   <div class="services__container">
+      <h2 class="services__title">КАКИЕ <span>УСЛУГИ</span> ПРЕДОСТАВЛЯЮ?</h2>
+      <div class="services__body">
+         <div class="services__content content-services">
+            <div class="content-services__item">
+               <h3 class="content-services__title">ТЕРАПЕВТИЧЕСКАЯ ПОМОЩЬ</h3>
+               <div class="content-services__text">Лечение кариеса, пульпита, периодонтита, эстетическая реставрация
+                  зубов. Не дожидайтесь острых проявлений заболевания. Вылечу все качественно</div>
+            </div>
+            <div class="content-services__item">
+               <h3 class="content-services__title">ХИРУРГИЧЕСКАЯ ПОМОЩЬ</h3>
+               <div class="content-services__text">Безболезненное и атравматичное удаление зубов. Дам необходимые
+                  рекомендации по восстановлению с учетом всех Ваших особенностей</div>
+            </div>
+            <div class="content-services__item">
+               <h3 class="content-services__title">ПРОФЕССИОНАЛЬНАЯ ЧИСТКА ЗУБОВ</h3>
+               <div class="content-services__text">С помощью ультразвука и технологий Эйр Флоу безупречно проведу чистку
+                  зубов от твердого и мягкого налета, не повреждая при этом эмаль</div>
+            </div>
+         </div>
+         <div class="services__img">
+            <img src="{{asset('img/home/tooth.jpg')}}" alt="Здоровые зубы">
+         </div>
+         <div class="services__content content-services">
+            <div class="content-services__item">
+               <h3 class="content-services__title">ПРОТЕЗИРОВАНИЕ</h3>
+               <div class="content-services__text">Сотрудничаю с одной из лучших зуботехнических лабораторий, поэтому
+                  гарантирую, что протез будет надежным, естетичным и удобным</div>
+            </div>
+            <div class="content-services__item">
+               <h3 class="content-services__title">ДЕТСКИЙ ПРИЁМ</h3>
+               <div class="content-services__text">Без стрессов, без боли. Прием строится на понимании желаний,
+                  потребностей, переживаний маленького пациента</div>
+            </div>
+            <div class="content-services__item">
+               <h3 class="content-services__title">ПЛАЗМОТЕРАПИЯ</h3>
+               <div class="content-services__text">Лечение заболеваний пародонта. Позволяет восстановить обменный
+                  процесс, улучшить микроциркуляцию и метаболизм в клетках тканей</div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
 @endsection

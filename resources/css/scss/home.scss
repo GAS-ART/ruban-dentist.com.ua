@@ -322,3 +322,107 @@
 }
 
 /*===============WHY-ME================*/
+
+/*===============SERVICES================*/
+.services {
+   margin-bottom: 60px;
+   @media (max-width: $mobile) {
+      margin-bottom: 30px;
+   }
+
+   &__container {
+   }
+
+   &__title {
+      @include adaptiveValueREM('font-size', 34,18 );
+      text-align: center;
+      line-height: 1.1765;
+      span{
+         color: $blue;
+      }
+      margin-bottom: 60px;
+      @media (max-width: $mobile) {
+      margin-bottom: 30px;
+      }
+   }
+
+   &__body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .services__content:first-child{
+         text-align: right;
+         .content-services__item:first-child{
+            margin-right: 65px;
+         }
+         .content-services__item:nth-child(2){
+            margin-right: 155px;
+         }
+         .content-services__item:last-child{
+            margin-right: 65px;
+         }
+      }
+      .services__content:last-child{
+         .content-services__item:first-child{
+            margin-left: 65px;
+         }
+         .content-services__item:nth-child(2){
+            margin-left: 155px;
+         }
+         .content-services__item:last-child{
+            margin-left: 65px;
+         }
+      }
+   }
+
+   &__content {
+      flex: 0 0 430px;
+      &:first-child{
+    //     margin-right: 155px;
+      }
+   }
+
+   &__img {
+      flex: 0 0 115px;
+     // margin-right: 155px;
+      position: relative;
+      &::before{
+         content: '';
+         position: absolute;
+         left: -50%;
+         top: -50%;
+         transform: translate(12px, 12px);
+         width: 330px;
+         height: 302px;
+         background-color: transparent;
+         border-radius: 50%;
+         border: 1px solid #1B1D1F;
+      }
+   }
+}
+.content-services {
+
+   &__item {
+      &:not(:last-child){
+      margin-bottom: 30px;
+      }
+      
+   }
+
+   &__title {
+      @include adaptiveValueREM('font-size', 20,16 );
+      font-weight: 600;
+      line-height: 135%;
+      color: $blue;
+      margin-bottom: 5px;
+      white-space: nowrap;
+   }
+
+   &__text {
+      line-height: 1,1875;
+   }
+}
+
+/*===============SERVICES================*/
+
+
