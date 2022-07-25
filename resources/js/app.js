@@ -1,5 +1,7 @@
 //require('./bootstrap');
 
+import { popUp } from './modules/popup.js';
+
 window.onload = function () {
    document.addEventListener('click', documentActions);
 
@@ -16,10 +18,10 @@ window.onload = function () {
       }
 
       //popUp
-      /*  if (target.closest('.link-on-popup')) {
-           popUp(target.closest('.link-on-popup').dataset.popupId);
-           e.preventDefault();
-        }*/
+      if (target.closest('.link-on-popup')) {
+         popUp(target.closest('.link-on-popup').dataset.popupId);
+         e.preventDefault();
+      }
    }
 
    //Menu burger

@@ -1,13 +1,18 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modules_popup_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/popup.js */ "./resources/js/modules/popup.js");
 //require('./bootstrap');
+
+
 window.onload = function () {
   document.addEventListener('click', documentActions);
 
@@ -24,11 +29,11 @@ window.onload = function () {
       });
     } //popUp
 
-    /*  if (target.closest('.link-on-popup')) {
-         popUp(target.closest('.link-on-popup').dataset.popupId);
-         e.preventDefault();
-      }*/
 
+    if (target.closest('.link-on-popup')) {
+      (0,_modules_popup_js__WEBPACK_IMPORTED_MODULE_0__.popUp)(target.closest('.link-on-popup').dataset.popupId);
+      e.preventDefault();
+    }
   } //Menu burger
 
 
@@ -82,13 +87,59 @@ window.onload = function () {
 
 /***/ }),
 
+/***/ "./resources/js/modules/popup.js":
+/*!***************************************!*\
+  !*** ./resources/js/modules/popup.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "popUp": () => (/* binding */ popUp)
+/* harmony export */ });
+function popUp(popupId) {
+  var popUp = document.getElementById(popupId);
+  var bodyLock = document.getElementById('body');
+  var popupCloseIcon = popUp.querySelector('.close-popup'); //const popupBtn = popUp.querySelector('.popup__button');
+
+  var popupSending = popUp.querySelector('.popup__send-load');
+  var filePreview = popUp.querySelector('.preview-file') || false;
+  popUp.classList.add('open');
+  bodyLock.classList.add('lock');
+  popupCloseIcon.addEventListener('click', function (e) {
+    popupClose(popUp);
+    e.preventDefault();
+  });
+  /*popupBtn.addEventListener('click', function () {
+  	popupClose(popUp);
+  });*/
+
+  function popupClose(popupActive) {
+    popupActive.classList.remove('open');
+    bodyLock.classList.remove("lock");
+    popUp.classList.remove('send');
+
+    if (filePreview) {
+      filePreview.innerHTML = '';
+    }
+  }
+
+  popUp.addEventListener('mousedown', function (e) {
+    if (!e.target.closest('.popup__content')) {
+      popupClose(popUp);
+    }
+  });
+}
+;
+
+/***/ }),
+
 /***/ "./resources/css/scss/style.scss":
 /*!***************************************!*\
   !*** ./resources/css/scss/style.scss ***!
   \***************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
@@ -154,6 +205,18 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 				}
 /******/ 			}
 /******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
 /******/ 		};
 /******/ 	})();
 /******/ 	
