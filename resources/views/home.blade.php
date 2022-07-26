@@ -16,12 +16,13 @@
             <div class="description-main-screen__body">
                <div class="description-main-screen__text text-main-screen">
                   <div class="text-main-screen__row">
-                     <h1 class="text-main-screen__title">ПРОФЕССИОНАЛЬНОЕ И БЕЗБОЛЕЗНЕННОЕ <span>ЛЕЧЕНИЕ ЗУБОВ</span>
+                     <h1 class="text-main-screen__title _animate">ПРОФЕССИОНАЛЬНОЕ И БЕЗБОЛЕЗНЕННОЕ <span>ЛЕЧЕНИЕ
+                           ЗУБОВ</span>
                      </h1>
-                     <div class="text-main-screen__text">Проведу полную диагностику ротовой полости и выстроим
+                     <div class="text-main-screen__text _animate">Проведу полную диагностику ротовой полости и выстроим
                         индивидуальный план лечения. Звоните и получите абсолютно бесплатную консультацию</div>
                   </div>
-                  <div class="text-main-screen__buttons">
+                  <div class="text-main-screen__buttons _animate">
                      <a class="text-main-screen__call" href="tel:%2B0956664748">ПОЗВОНИТЬ</a>
                      <a class="text-main-screen__service" href="#">УСЛУГИ</a>
                   </div>
@@ -36,15 +37,15 @@
       </div>
       <div class="main-screen__cards cards-main-screen">
          <div class="main-screen__container ">
-            <div class="cards-main-screen__card">
+            <div class="cards-main-screen__card _animate">
                <div class="cards-main-screen__number">15</div>
                <div class="cards-main-screen__text">Лет оказываю услуги по лечению зубов для взрослых и детей</div>
             </div>
-            <div class="cards-main-screen__card">
+            <div class="cards-main-screen__card _animate">
                <div class="cards-main-screen__number">90%</div>
                <div class="cards-main-screen__text">Клиентов обращаются ко мне повторно</div>
             </div>
-            <div class="cards-main-screen__card">
+            <div class="cards-main-screen__card _animate">
                <div class="cards-main-screen__number">12</div>
                <div class="cards-main-screen__text">месяцев гарантия на предоставляемые услуги</div>
             </div>
@@ -117,19 +118,19 @@
 <section class="services">
    <div class="services__container">
       <h2 class="services__title">КАКИЕ <span>УСЛУГИ</span> ПРЕДОСТАВЛЯЮ?</h2>
-      <div class="services__body">
+      <div class="services__body _animate-tooth">
          <div class="services__content content-services">
-            <div class="content-services__item">
+            <div class="content-services__item _tooth _tooth-mobile">
                <h3 class="content-services__title"> <a href="#">ТЕРАПЕВТИЧЕСКАЯ ПОМОЩЬ</a></h3>
                <div class="content-services__text">Лечение кариеса, пульпита, периодонтита, эстетическая реставрация
                   зубов. Не дожидайтесь острых проявлений заболевания. Вылечу все качественно</div>
             </div>
-            <div class="content-services__item">
+            <div class="content-services__item _tooth _tooth-mobile">
                <h3 class="content-services__title"><a href="#">ХИРУРГИЧЕСКАЯ ПОМОЩЬ</a></h3>
                <div class="content-services__text">Безболезненное и атравматичное удаление зубов. Дам необходимые
                   рекомендации по восстановлению с учетом всех Ваших особенностей</div>
             </div>
-            <div class="content-services__item">
+            <div class="content-services__item _tooth _tooth-mobile">
                <h3 class="content-services__title"><a href="#">ПРОФЕССИОНАЛЬНАЯ ЧИСТКА ЗУБОВ</a></h3>
                <div class="content-services__text">С помощью ультразвука и технологий Эйр Флоу безупречно проведу чистку
                   зубов от твердого и мягкого налета, не повреждая при этом эмаль</div>
@@ -137,25 +138,25 @@
          </div>
          <div class="services__img">
             <img src="{{asset('img/home/tooth.jpg')}}" alt="Здоровые зубы">
-            <span>+</span>
-            <span>+</span>
-            <span>+</span>
-            <span>+</span>
-            <span>+</span>
-            <span>+</span>
+            <span class="_tooth _tooth-mobile">+</span>
+            <span class="_tooth _tooth-mobile">+</span>
+            <span class="_tooth _tooth-mobile">+</span>
+            <span class="_tooth _tooth-mobile">+</span>
+            <span class="_tooth _tooth-mobile">+</span>
+            <span class="_tooth _tooth-mobile">+</span>
          </div>
          <div class="services__content content-services">
-            <div class="content-services__item">
+            <div class="content-services__item _tooth _tooth-mobile">
                <h3 class="content-services__title"><a href="#">ПРОТЕЗИРОВАНИЕ</a></h3>
                <div class="content-services__text">Сотрудничаю с одной из лучших зуботехнических лабораторий, поэтому
                   гарантирую, что протез будет надежным, естетичным и удобным</div>
             </div>
-            <div class="content-services__item">
+            <div class="content-services__item _tooth _tooth-mobile">
                <h3 class="content-services__title"><a href="#">ДЕТСКИЙ ПРИЁМ</a></h3>
                <div class="content-services__text">Без стрессов, без боли. Прием строится на понимании желаний,
                   потребностей, переживаний маленького пациента</div>
             </div>
-            <div class="content-services__item">
+            <div class="content-services__item _tooth _tooth-mobile">
                <h3 class="content-services__title"><a href="#">ПЛАЗМОТЕРАПИЯ</a></h3>
                <div class="content-services__text">Лечение заболеваний пародонта. Позволяет восстановить обменный
                   процесс, улучшить микроциркуляцию и метаболизм в клетках тканей</div>
@@ -174,6 +175,13 @@
             <button data-popup-id="lead" class="consultation__btn link-on-popup">ЗАПИСАТЬСЯ НА ПРИЁМ</button>
          </div>
       </div>
+   </div>
+</section>
+<section class="images">
+   <div class="images__container">
+      <img src="{{asset('img/home/1.jpg')}}" alt="Протезирование зубов" class="images__img _animate">
+      <img src="{{asset('img/home/2.jpg')}}" alt="Детский врач стоматолог" class="images__img _animate">
+      <img src="{{asset('img/home/3.jpg')}}" alt="Профессиональная чистка зубов" class="images__img _animate">
    </div>
 </section>
 @endsection

@@ -82,7 +82,74 @@ window.onload = function () {
   }
 
   var headerObserver = new IntersectionObserver(watchHeader);
-  headerObserver.observe(headerElement);
+  headerObserver.observe(headerElement); //header animation
+
+  var animation = document.querySelectorAll('._animate');
+  var options = {
+    rootMargin: '0px 0px 0px 200%'
+  };
+  var animationObserver = new IntersectionObserver(watchAnimation, options);
+  animation.forEach(function (item) {
+    return animationObserver.observe(item);
+  });
+
+  function watchAnimation(entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('_animated');
+      }
+    });
+  } //tooth animation
+
+
+  var threshold = 1;
+  window.innerWidth < 1050 ? threshold = 0.2 : threshold = 0.5;
+  var toothOptions = {
+    rootMargin: '200% 0px 0px 200%',
+    threshold: threshold
+  };
+
+  if (threshold == 0.5) {
+    var watchToothAnimation = function watchToothAnimation(entries) {
+      if (entries[0].isIntersecting) {
+        toothElements.forEach(function (item) {
+          return item.classList.add('_animated');
+        });
+      }
+    };
+
+    var resize = function resize() {
+      if (toothElements[0].classList.contains('_animated')) window.removeEventListener('resize', resize);
+
+      if (window.innerWidth < 1050) {
+        toothOptions.threshold = 0.2;
+        animationToothObserver = new IntersectionObserver(watchToothAnimation, toothOptions);
+        animationToothObserver.observe(animateTooth);
+      }
+    };
+
+    var animationToothObserver = new IntersectionObserver(watchToothAnimation, toothOptions);
+    var animateTooth = document.querySelector('._animate-tooth');
+    var toothElements = document.querySelectorAll('._tooth');
+    animationToothObserver.observe(animateTooth);
+    window.addEventListener('resize', resize);
+  } else {
+    var watchToothAnimationMobile = function watchToothAnimationMobile(entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('_animated');
+        }
+      });
+    };
+
+    var animateToothMobile = document.querySelectorAll('._tooth-mobile');
+
+    var _animationToothObserver = new IntersectionObserver(watchToothAnimationMobile, toothOptions);
+
+    animateToothMobile.forEach(function (item) {
+      return _animationToothObserver.observe(item);
+    });
+  }
 };
 
 /***/ }),

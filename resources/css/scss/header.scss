@@ -9,6 +9,40 @@ z-index: 100;
    .header__wraper{
       background-color: $paleBlue;
    }
+   .header-logo__text-name{
+      color: #ffffff;
+      opacity: 1;
+   }
+   .header-logo__text{
+      color: #ffffff;
+      @media (pointer: fine) {
+         &:hover {
+            .header-logo__text-name{
+              color: #ffffff;
+            }
+            .header-logo__text-status{
+               color: #ffffff;
+            }
+         }
+         }
+         &.active{
+            .header-logo__text-name{
+               color: #ffffff;
+            }
+            .header-logo__text-status{
+               color: #ffffff;
+            }
+         }
+   }
+   .header-menu__link,
+   .header-actions__phone,
+   .header-actions__lang{
+      @media (pointer: fine) {
+         &:hover {
+          color: #ffffff;
+         }
+      }
+   }
 }
    &__wraper {
       position: fixed;
@@ -85,7 +119,6 @@ z-index: 100;
       margin-top: 6px;
       line-height: 140%;
       white-space: nowrap;
-      transition: all 0.5s ease 0s;
       @media (pointer: fine) {
       &:hover {
          .header-logo__text-name{

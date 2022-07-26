@@ -14,6 +14,7 @@
    -webkit-transition: all 0.8s ease 0s;
    -o-transition: all 0.8s ease 0s;
    transition: all 0.8s ease 0s;
+   overflow-y: auto;
  }
  
  .popup__body {
@@ -91,14 +92,32 @@
            justify-content: center;
  }
  
- .popup__links{
+ .popup__mesengers{
     display: flex;
     justify-content: center;
     @media (max-width: $mobile) {
          flex-direction: column;
     }
  }
- .popup__links-viber{
+ .popup__mesenger{
+  display: flex;
+  flex-direction: column;
+ }
+ .popup__mesenger-link-img{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 10px auto;
+  img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  }
+ }
+ .popup__viber{
    padding: 10px 15px;
    background-color: #7B519D;
    color: #fff;
@@ -107,12 +126,13 @@
    position: relative;
    white-space: nowrap;
    text-align: center;
+   min-width: 205px;
    @media (max-width: $mobile) {
     margin-right: 0;
-    margin-bottom: 15px;
+    margin-bottom: 35px;
    }
 }
- .popup__links-telegram{
+ .popup__telegram{
    background-color: #0088CC;
    padding: 10px 15px;
    color: #fff;
@@ -120,18 +140,20 @@
    margin-right: 15px;
    white-space: nowrap;
    text-align: center;
+   min-width: 205px;
    @media (max-width: $mobile) {
       margin-right: 0;
-      margin-bottom: 15px;
+      margin-bottom: 35px;
    }
  }
- .popup__links-watsapp{
+ .popup__watsapp{
    background-color: #4DC247;
    padding: 10px 15px;
    color: #fff;
    border-radius: 10px;
    white-space: nowrap;
    text-align: center;
+   min-width: 205px;
  }
  
  /*----POP-UP-JS----*/
