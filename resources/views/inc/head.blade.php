@@ -27,7 +27,7 @@
 
    <link rel="stylesheet" href="{{asset('css/style.css') . '?_v=1'}}"> 
 
-   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+ <!--   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>-->
    <script src="{{asset('js/app.js')}}"></script>
 
    <!-- Global site tag (gtag.js) - Google Analytics -->

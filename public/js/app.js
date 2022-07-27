@@ -19,7 +19,7 @@ window.onload = function () {
   function documentActions(e) {
     var target = e.target; //remove burger
 
-    if (!target.closest('.burger') && !target.closest('.icon-menu')) {
+    if (!target.closest('.burger') && !target.closest('.icon-menu') || target.classList.contains('menu__link')) {
       menuBtn.classList.remove('open');
       burger.classList.remove('open');
       phone.classList.remove('white');
@@ -149,7 +149,52 @@ window.onload = function () {
     animateToothMobile.forEach(function (item) {
       return _animationToothObserver.observe(item);
     });
-  }
+  } //scroll to services
+
+
+  var scrolling = function scrolling(selectorBtn) {
+    //const btnUp = document.querySelector(selectorBtn);
+    var links = document.querySelectorAll("[href^='#']");
+    var speed = 0.3;
+    var headerHeight = document.querySelector('.header__wraper').offsetHeight;
+    /*window.addEventListener("scroll", () => {
+      if (document.documentElement.scrollTop > 1600) {
+        btnUp.style.opacity = "1";
+      } else {
+        btnUp.style.opacity = "0";
+      }
+    });*/
+
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener("click", function (event) {
+        event.preventDefault();
+        var widthTop = Math.round(document.documentElement.scrollTop || document.body.scrollTop),
+            hash = this.hash,
+            toBlock = document.querySelector(hash).getBoundingClientRect().top - headerHeight,
+            start = null;
+        requestAnimationFrame(step);
+
+        function step(time) {
+          if (start === null) {
+            start = time;
+          }
+
+          var progress = time - start,
+              r = toBlock < 0 ? Math.max(widthTop - progress / speed, widthTop + toBlock) : Math.min(widthTop + progress / speed, widthTop + toBlock);
+          var element = document.documentElement || document.body;
+          console.log(r != widthTop + toBlock);
+          element.scrollTo(0, r);
+
+          if (r != widthTop + toBlock) {
+            requestAnimationFrame(step);
+          } else {// location.hash = hash;
+          }
+        }
+      });
+    }
+  };
+
+  scrolling();
 };
 
 /***/ }),

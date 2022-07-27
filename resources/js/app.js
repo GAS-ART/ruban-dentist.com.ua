@@ -7,9 +7,8 @@ window.onload = function () {
 
    function documentActions(e) {
       const target = e.target;
-
       //remove burger
-      if (!target.closest('.burger') && !target.closest('.icon-menu')) {
+      if (!target.closest('.burger') && !target.closest('.icon-menu') || target.classList.contains('menu__link')) {
          menuBtn.classList.remove('open');
          burger.classList.remove('open');
          phone.classList.remove('white');
@@ -131,4 +130,60 @@ window.onload = function () {
          });
       }
    }
+
+   //scroll to services
+   const scrolling = (selectorBtn) => {
+      //const btnUp = document.querySelector(selectorBtn);
+      const links = document.querySelectorAll("[href^='#']");
+      let speed = 0.3;
+      const headerHeight = document.querySelector('.header__wraper').offsetHeight;
+
+      /*window.addEventListener("scroll", () => {
+        if (document.documentElement.scrollTop > 1600) {
+          btnUp.style.opacity = "1";
+        } else {
+          btnUp.style.opacity = "0";
+        }
+      });*/
+
+      for (let i = 0; i < links.length; i++) {
+         links[i].addEventListener("click", function (event) {
+            event.preventDefault();
+
+            let widthTop = Math.round(
+               document.documentElement.scrollTop || document.body.scrollTop
+            ),
+               hash = this.hash,
+               toBlock = document.querySelector(hash).getBoundingClientRect().top - headerHeight,
+               start = null;
+            requestAnimationFrame(step);
+
+            function step(time) {
+               if (start === null) {
+                  start = time;
+               }
+
+               let progress = time - start,
+                  r =
+                     toBlock < 0
+                        ? Math.max(widthTop - progress / speed, widthTop + toBlock)
+                        : Math.min(widthTop + progress / speed, widthTop + toBlock);
+
+               let element = document.documentElement || document.body;
+               console.log(r != widthTop + toBlock);
+               element.scrollTo(0, r);
+
+               if (r != widthTop + toBlock) {
+                  requestAnimationFrame(step);
+               } else {
+                  // location.hash = hash;
+               }
+            }
+         });
+      }
+   };
+
+   scrolling(/*".pageup"*/);
+
+
 }

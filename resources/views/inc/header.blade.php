@@ -13,9 +13,9 @@
                </a>
             </div>
             <nav class="header__item header-menu">
-               <a class="header-menu__link" href="#">Преимущества</a>
-               <a class="header-menu__link" href="#">Услуги</a>
-               <a class="header-menu__link" href="#">Контакты</a>
+               <a class="header-menu__link" href="#why-me">@lang('header.advantages')</a>
+               <a class="header-menu__link" href="#service">@lang('header.services')</a>
+               <a class="header-menu__link" href="#contacts">@lang('header.contacts')</a>
             </nav>
             <div class="header__item header-actions">
                <div class="icon-menu">
@@ -34,18 +34,18 @@
                <nav class="menu__body">
                   <ul class="menu__list">
                      <li class="menu__item">
-                        <a href="#" class="menu__link">
-                           Преимущества
+                        <a href="#why-me" class="menu__link">
+                        @lang('header.advantages')
                         </a>
                      </li>
                      <li class="menu__item">
-                        <a href="#" class="menu__link">
-                           Услуги
+                        <a href="#service" class="menu__link">
+                        @lang('header.services')
                         </a>
                      </li>
                      <li class="menu__item">
-                        <a href="#" class="menu__link">
-                           Контакты
+                        <a href="#contacts" class="menu__link">
+                        @lang('header.contacts')
                         </a>
                      </li>
                   </ul>
