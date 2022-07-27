@@ -28,7 +28,7 @@ class languagesController extends Controller
 
         if(Str::contains($urlPart, $languages) ){
             for ($i=0; $i < count($languages); $i++) {
-                if (Str::contains($url,  $languages[$i]) ) {
+                if (Str::contains($urlPart,  $languages[$i]) ) {
                     $url = $domain . str_replace($languages[$i],  $locale, $urlPart);
                     return redirect($url);
                 }
