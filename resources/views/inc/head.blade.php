@@ -19,7 +19,7 @@
    <meta property="og:title" content="@yield('ogTitle')" />
    <meta property="og:description" content="@yield('ogDescription')"/>
    <meta property="og:site_name" content="ruban-dentist.com.ua" />
- <!--  <meta property="og:image" content="{{ asset('img/avatar/3.jpg')}}"/> -->
+      <meta property="og:image" content="{{ asset('img/msg_ava.jpg')}}"/> 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

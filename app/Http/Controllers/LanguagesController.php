@@ -15,12 +15,12 @@ class languagesController extends Controller
 
         $url = URL::previous();
 
-        $languages = ['ru', 'ua' ];
+        $languages = ['/ru', '/ua' ];
 
-        if(Str::contains($url, ['ru', 'ua' ]) ){
+        if(Str::contains($url, ['/ru', '/ua' ]) ){
             for ($i=0; $i < count($languages); $i++) {
                 if (Str::contains($url, $languages[$i]) ) {
-                    $url = str_replace($languages[$i], $locale, $url);
+                    $url = str_replace($languages[$i], '/' . $locale, $url);
                     return redirect($url);
                 }
             }

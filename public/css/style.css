@@ -592,11 +592,11 @@ body.lock {
   position: relative;
   display: flex;
   align-items: flex-end;
-  margin-bottom: 128px;
+  margin-bottom: 30px;
 }
 @media (max-width: 47.99875em) {
   .main-screen__description {
-    margin-bottom: 400px;
+    margin-bottom: 40px;
   }
 }
 .main-screen__container {
@@ -610,13 +610,19 @@ body.lock {
   }
 }
 .main-screen__cards {
-  position: absolute;
-  top: calc(100% - 60px);
+  position: relative;
+  top: -90px;
   left: 0;
   width: 100%;
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
+}
+@media (max-width: 47.99875em) {
+  .main-screen__cards {
+    position: relative;
+    top: -60px;
+  }
 }
 
 .description-main-screen__container {
@@ -835,7 +841,6 @@ body.lock {
   }
   .cards-main-screen__card:first-child {
     margin-left: 0px;
-    transition: all 0.8s ease 0.4s;
   }
 }
 .cards-main-screen__number {
