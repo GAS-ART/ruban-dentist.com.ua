@@ -13,20 +13,26 @@ class languagesController extends Controller
 
     public function changeLocale($locale) {
 
+        
         $url = URL::previous();
+        $domain = Str::before($url, '://') . "://" .  Str::between( $url, '://', '/') . "/";
 
-        $languages = ['/ru', '/ua' ];
+        if($url == $domain && $locale == "ua"){
+            return redirect($url);
+        } else if ($url == $domain && $locale != "ua"){
+            return redirect($url . $locale);
+        }
 
-        if(Str::contains($url, ['/ru', '/ua' ]) ){
+        $urlPart = Str::of($url)->after($domain);
+        $languages = ['ru', 'ua' ];
+
+        if(Str::contains($urlPart, $languages) ){
             for ($i=0; $i < count($languages); $i++) {
-                if (Str::contains($url, $languages[$i]) ) {
-                    $url = str_replace($languages[$i], '/' . $locale, $url);
+                if (Str::contains($url,  $languages[$i]) ) {
+                    $url = $domain . str_replace($languages[$i],  $locale, $urlPart);
                     return redirect($url);
                 }
             }
-        } else if ( Str::contains($url, '/') ) {
-            $url = str_replace('/locale', '', $url);
-            return redirect($url . $locale);
         }
     }
 }
