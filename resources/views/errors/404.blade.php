@@ -2,7 +2,6 @@
 <?php
 $languages = ['ru', 'ua' ];
 $url = url()->current();
-$domain = Str::before($url, '://') . "://" .  Str::between( $url, '://', '/') . "/";
 $protacol = Str::before($url, '://') . "://";
 $urlPart = Str::of($url)->after($protacol);
 $domain = Str::before( $urlPart, '/') . "/";
