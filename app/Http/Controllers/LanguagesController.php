@@ -15,8 +15,9 @@ class languagesController extends Controller
 
         $mainLanguage = "ua";
         $url = URL::previous();
-        $domain = Str::before($url, '://') . "://" .  Str::between( $url, '://', '/') . "/";
-
+        $protocol = Str::before($url, '://') . "://";
+        $urlPart = Str::of($url)->after($protocol);
+        $domain = $protocol . Str::before( $urlPart, '/') . "/";
         if($url == $domain && $locale == $mainLanguage){
             return redirect($url);
         } else if ($url == $domain && $locale != $mainLanguage){

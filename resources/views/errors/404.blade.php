@@ -1,13 +1,19 @@
-@if(Str::contains(url()->current(), '/ua'))
-{{app()->setLocale('ua')}}
-@endif
-@if(Str::contains(url()->current(), '/ru'))
-{{app()->setLocale('ru')}}
-@endif
-@if(!Str::contains(url()->current(), ['/ua', '/ru']))
-<script>window.location = "<?php echo Str::of(url()->current())->substrReplace('/ua/',22,0) ?>";</script> <!-- проверить нужна ли "/" перед ua -->
-{{app()->setLocale('ua')}}
-@endif
+
+<?php
+$languages = ['ru', 'ua' ];
+$url = url()->current();
+$domain = Str::before($url, '://') . "://" .  Str::between( $url, '://', '/') . "/";
+$protacol = Str::before($url, '://') . "://";
+$urlPart = Str::of($url)->after($protacol);
+$domain = Str::before( $urlPart, '/') . "/";
+$urlPart = Str::after($urlPart, $domain);
+$urlLanguagePrefix = Str::substr($urlPart, 0, 2);
+if(Str::contains($urlLanguagePrefix, $languages)){
+   app()->setLocale($urlLanguagePrefix);
+} else {
+   app()->setLocale("ua");
+}
+?>
 @extends('layout')
 @section('title', __('404.tittle'))
 @section('description', __('404.text'))
