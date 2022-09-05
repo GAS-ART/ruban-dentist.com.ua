@@ -11,9 +11,6 @@ window.onload = function () {
       if (!target.closest('.burger') && !target.closest('.icon-menu') || target.classList.contains('menu__link')) {
          menuBtn.classList.remove('open');
          burger.classList.remove('open');
-         phone.classList.remove('white');
-         langsSeparator.classList.remove('white');
-         langs.forEach(lang => lang.classList.remove('white'))
       }
 
       //popUp
@@ -26,15 +23,9 @@ window.onload = function () {
    //Menu burger
    const menuBtn = document.querySelector('.icon-menu');
    const burger = document.querySelector('.burger');
-   const phone = document.querySelector('.header-actions__phone');
-   const langs = document.querySelectorAll('.header-actions__lang');
-   const langsSeparator = document.querySelector('.header-actions__separator');
    menuBtn.addEventListener('click', function () {
       menuBtn.classList.toggle('open');
       burger.classList.toggle('open');
-      phone.classList.toggle('white');
-      langs.forEach(lang => lang.classList.toggle('white'));
-      langsSeparator.classList.toggle('white');
    });
 
    //logo actions

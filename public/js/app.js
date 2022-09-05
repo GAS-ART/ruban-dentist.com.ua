@@ -22,11 +22,6 @@ window.onload = function () {
     if (!target.closest('.burger') && !target.closest('.icon-menu') || target.classList.contains('menu__link')) {
       menuBtn.classList.remove('open');
       burger.classList.remove('open');
-      phone.classList.remove('white');
-      langsSeparator.classList.remove('white');
-      langs.forEach(function (lang) {
-        return lang.classList.remove('white');
-      });
     } //popUp
 
 
@@ -39,17 +34,9 @@ window.onload = function () {
 
   var menuBtn = document.querySelector('.icon-menu');
   var burger = document.querySelector('.burger');
-  var phone = document.querySelector('.header-actions__phone');
-  var langs = document.querySelectorAll('.header-actions__lang');
-  var langsSeparator = document.querySelector('.header-actions__separator');
   menuBtn.addEventListener('click', function () {
     menuBtn.classList.toggle('open');
     burger.classList.toggle('open');
-    phone.classList.toggle('white');
-    langs.forEach(function (lang) {
-      return lang.classList.toggle('white');
-    });
-    langsSeparator.classList.toggle('white');
   }); //logo actions
 
   var logo = document.querySelector('.header-logo__logo');
