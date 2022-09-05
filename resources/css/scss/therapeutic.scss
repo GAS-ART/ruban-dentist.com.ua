@@ -1,0 +1,33 @@
+.caries {
+
+   &__middle {
+      @include adaptiveValueREM('margin-bottom', 90,30 );
+   }
+
+   &__middle-title {
+   }
+
+   &__middle-body {
+      display: grid;
+      grid-template-columns: repeat(3, 280px);
+      grid-row: auto auto;
+      row-gap: 70px;
+      @include adaptiveValueREM('column-gap', 120, 60, 1400,992,1);
+      @media (max-width: $tablet) {
+         grid-template-columns: repeat(2, 280px);
+         grid-row: auto auto auto;
+         justify-content: center;
+      }
+      @media (max-width: $mobile) {
+         grid-template-columns:  280px;
+         grid-row: repeat(6, auto);
+      }
+   }
+
+   &__middle-item {
+
+   }
+
+   &__middle-text {
+   }
+}
