@@ -29,7 +29,7 @@
                </div>
             </div>
          </div>
-         <img class="description-main-screen__bacgroud" src="{{asset('/img/home/background.jpg')}}"
+         <img class="description-main-screen__backgroud" src="{{asset('/img/home/background.jpg')}}"
             alt="@lang('home.main_screen.alt')">
       </div>
       <div class="main-screen__cards cards-main-screen">

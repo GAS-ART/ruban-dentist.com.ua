@@ -13,9 +13,6 @@
       @media (max-width: $mobile) {
          margin-bottom: 40px;
       }
-      &.service {
-         height: 663px;
-      }
    }
    &__container{
       display: flex;
@@ -54,7 +51,7 @@
 
    }
 
-   &__bacgroud{
+   &__backgroud{
       position: absolute;
       top: 0;
       left: 0;
@@ -134,9 +131,6 @@
          transform: translate(0, 0);
          opacity: 1;
       }
-      &.service{
-         margin-bottom: 55px;
-      }
    }
 
    &__buttons {
@@ -147,6 +141,7 @@
          align-items: center;
          &.service{
             display: block;
+            
          }
       }
       transform: translate(0, 70%);
@@ -155,9 +150,6 @@
       &._animated {
          transform: translate(0, 0);
          opacity: 1;
-      }
-      &.service{
-         margin-bottom: 90px;
       }
    }
 
@@ -175,21 +167,6 @@
       @media (max-width: $mobile) {
       margin-bottom: 15px;
       min-width: 140px;
-      &.service{
-         a{
-            display: block;
-         }
-         
-      }
-      }
-      &.service{
-         min-width: 280px;
-         min-height: 55px;
-         box-shadow: 2px 2px 20px $blue;
-         text-transform: capitalize;
-         font-weight: 600;
-         font-size: 19px;
-         line-height: 140%;
       }
    }
 
