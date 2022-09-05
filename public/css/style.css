@@ -262,8 +262,8 @@ body.lock {
 }
 @media (max-width: 29.99875em) {
   .header-logo {
-    display: flex;
-    flex-direction: column;
+    /*display: flex;
+    flex-direction: column;*/
   }
 }
 .header-logo__logo {
@@ -347,15 +347,15 @@ body.lock {
   letter-spacing: 0.8px;
   transition: all 0.3s ease 0s;
 }
-@supports (font-size: clamp( 0.875rem , 0.6964285714rem  +  0.8928571429vw , 1.125rem )) {
+@supports (font-size: clamp( 1rem , 0.9107142857rem  +  0.4464285714vw , 1.125rem )) {
   .header-logo__text-status {
-    font-size: clamp( 0.875rem , 0.6964285714rem  +  0.8928571429vw , 1.125rem );
+    font-size: clamp( 1rem , 0.9107142857rem  +  0.4464285714vw , 1.125rem );
   }
 }
-@supports not (font-size: clamp( 0.875rem , 0.6964285714rem  +  0.8928571429vw , 1.125rem )) {
+@supports not (font-size: clamp( 1rem , 0.9107142857rem  +  0.4464285714vw , 1.125rem )) {
   .header-logo__text-status {
     font-size: calc(
-         0.875rem + 0.25 * (100vw - 20rem) / 28
+         1rem + 0.125 * (100vw - 20rem) / 28
       );
   }
 }
