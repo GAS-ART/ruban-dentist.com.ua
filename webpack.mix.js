@@ -1,5 +1,7 @@
 const mix = require('laravel-mix');
 
+require('laravel-mix-webp');
+
 mix.browserSync({
     proxy: 'http://127.0.0.1:8000'
 });
@@ -15,4 +17,11 @@ mix.browserSync({
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/css/scss/style.scss', 'public/css', []);
+    .sass('resources/css/scss/style.scss', 'public/css', [])
+    .ImageWebp({
+        from: 'public/img/therapeutic',
+        to: 'public/img/therapeutic',
+        imageminWebpOptions: {
+            quality: 75
+        },
+    });

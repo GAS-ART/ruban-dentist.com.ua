@@ -35,3 +35,20 @@ Route::get('/{locale}', function ($locale) {
        return view('home');
     }
     })->name('index.lang');
+
+    Route::get('/{locale}/therapeutic_help', function ($locale) {
+      if (! in_array($locale, ['ua', 'ru'])) { 
+   
+         abort(404);
+   
+      } else if ($locale == 'ua') {
+   
+         App::setLocale('ua');
+         return view('therapeutic');
+   
+      } else if ($locale == 'ru') {
+   
+         App::setLocale('ru');
+         return view('therapeutic');
+      }
+      })->name('therapeutic.lang');
