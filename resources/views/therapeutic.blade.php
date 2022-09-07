@@ -5,8 +5,6 @@
 @section('ogDescription', __('titles.home.ogDescription'))
 @section('ogUrl', __('titles.home.ogUrl'))
 
-@section('page', 'home')
-
 
 @section('content')
 

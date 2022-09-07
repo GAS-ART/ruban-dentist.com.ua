@@ -1,13 +1,18 @@
 @section('header')
+
 <header class="header">
    <div class="header__wraper">
       <div class="header__container">
          <div class="header__items">
             <div class="header__item header-logo">
                <a href="{{ route('index.lang', ['locale' => __('lang.current')]) }}" class="header-logo__logo">
+               @if(!Request::is('ru/teeth_cleaning', 'ua/teeth_cleaning'))
                   <img src="{{asset('/img/logo.png')}}" alt="Досктор стаматолог Татьяна Рубан">
+                  @else
+                  <img src="{{asset('/img/logo_white.png')}}" alt="Досктор стаматолог Татьяна Рубан">
+                  @endif
                </a>
-               <a href="{{ route('index.lang', ['locale' => __('lang.current')]) }}" class="header-logo__text">
+               <a href="{{ route('index.lang', ['locale' => __('lang.current')]) }}" class="header-logo__text @yield('white')">
                   <div class="header-logo__text-name">DR. TANYA RUBAN</div>
                   <div class="header-logo__text-status">dentist</div>
                </a>

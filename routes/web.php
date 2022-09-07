@@ -52,3 +52,21 @@ Route::get('/{locale}', function ($locale) {
          return view('therapeutic');
       }
       })->name('therapeutic.lang');
+
+      Route::get('/{locale}/teeth_cleaning', function ($locale) {
+         if (! in_array($locale, ['ua', 'ru'])) { 
+      
+            abort(404);
+      
+         } else if ($locale == 'ua') {
+      
+            App::setLocale('ua');
+            return view('cleaning');
+      
+         } else if ($locale == 'ru') {
+      
+            App::setLocale('ru');
+            return view('cleaning');
+         }
+         })->name('cleaning.lang');
+   

@@ -120,6 +120,9 @@ z-index: 100;
       margin-top: 6px;
       line-height: 140%;
       white-space: nowrap;
+      &.white{
+            color: #ffffff;
+      }
       @media (pointer: fine) {
       &:hover {
          .header-logo__text-name{
@@ -147,7 +150,6 @@ z-index: 100;
       @include adaptiveValueREM('font-size', 26, 16, 768, 320, 1);
       font-style: normal;
       font-weight: 400;
-      opacity: 0.6;
       letter-spacing: -0.269px;
       transition: all 0.3s ease 0s;
    }
