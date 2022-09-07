@@ -104,7 +104,11 @@ z-index: 100;
       width: 47.56px;
       height: 52.77px;
       object-fit: fill;
+      &.inactive{
+         display: none;
       }
+      }
+      
       @media (max-width: $mobileSmall) {
          width: 26px;
          height: 27px;

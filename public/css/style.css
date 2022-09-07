@@ -702,6 +702,9 @@ body.lock {
   -o-object-fit: fill;
      object-fit: fill;
 }
+.header-logo__logo img.inactive {
+  display: none;
+}
 @media (max-width: 29.99875em) {
   .header-logo__logo {
     width: 26px;

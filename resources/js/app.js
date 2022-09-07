@@ -49,12 +49,18 @@ window.onload = function () {
 
    //Прокрутка header
    const headerElement = document.querySelector('.header');
+   let whiteLogo = document.querySelector('.white');
+   let blueLogo = document.querySelector('.blue');
 
    function watchHeader(entries) {
       if (entries[0].isIntersecting) {
-         entries[0].target.classList.remove('_scroll')
+         entries[0].target.classList.remove('_scroll');
+         blueLogo.classList.remove('inactive')
+         whiteLogo.classList.add('inactive');
       } else {
-         entries[0].target.classList.add('_scroll')
+         entries[0].target.classList.add('_scroll');
+         blueLogo.classList.add('inactive')
+         whiteLogo.classList.remove('inactive');
       }
 
    }

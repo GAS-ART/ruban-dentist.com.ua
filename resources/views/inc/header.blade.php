@@ -6,13 +6,16 @@
          <div class="header__items">
             <div class="header__item header-logo">
                <a href="{{ route('index.lang', ['locale' => __('lang.current')]) }}" class="header-logo__logo">
-               @if(!Request::is('ru/teeth_cleaning', 'ua/teeth_cleaning'))
-                  <img src="{{asset('/img/logo.png')}}" alt="Досктор стаматолог Татьяна Рубан">
+                  @if(!Request::is('ru/teeth_cleaning', 'ua/teeth_cleaning'))
+                  <img class="blue" src="{{asset('/img/logo.png')}}" alt="Досктор стаматолог Татьяна Рубан">
+                  <img class="white inactive" src="{{asset('/img/logo_white.png')}}"
+                     alt="Досктор стаматолог Татьяна Рубан">
                   @else
                   <img src="{{asset('/img/logo_white.png')}}" alt="Досктор стаматолог Татьяна Рубан">
                   @endif
                </a>
-               <a href="{{ route('index.lang', ['locale' => __('lang.current')]) }}" class="header-logo__text @yield('white')">
+               <a href="{{ route('index.lang', ['locale' => __('lang.current')]) }}"
+                  class="header-logo__text @yield('white')">
                   <div class="header-logo__text-name">DR. TANYA RUBAN</div>
                   <div class="header-logo__text-status">dentist</div>
                </a>
@@ -40,17 +43,17 @@
                   <ul class="menu__list">
                      <li class="menu__item">
                         <a href="#why-me" class="menu__link">
-                        @lang('header.advantages')
+                           @lang('header.advantages')
                         </a>
                      </li>
                      <li class="menu__item">
                         <a href="#service" class="menu__link">
-                        @lang('header.services')
+                           @lang('header.services')
                         </a>
                      </li>
                      <li class="menu__item">
                         <a href="#contacts" class="menu__link">
-                        @lang('header.contacts')
+                           @lang('header.contacts')
                         </a>
                      </li>
                   </ul>

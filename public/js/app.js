@@ -59,12 +59,18 @@ window.onload = function () {
 
 
   var headerElement = document.querySelector('.header');
+  var whiteLogo = document.querySelector('.white');
+  var blueLogo = document.querySelector('.blue');
 
   function watchHeader(entries) {
     if (entries[0].isIntersecting) {
       entries[0].target.classList.remove('_scroll');
+      blueLogo.classList.remove('inactive');
+      whiteLogo.classList.add('inactive');
     } else {
       entries[0].target.classList.add('_scroll');
+      blueLogo.classList.add('inactive');
+      whiteLogo.classList.remove('inactive');
     }
   }
 
