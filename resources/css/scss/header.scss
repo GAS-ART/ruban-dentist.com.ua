@@ -168,6 +168,11 @@ z-index: 100;
 }
 .header-menu {
    margin-top: 37px;
+   &.white{
+      a{
+         color: #fff;
+      }
+   }
    @media (max-width: $mobile) {
       display: none;
    }  

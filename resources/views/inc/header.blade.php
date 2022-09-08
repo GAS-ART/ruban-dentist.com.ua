@@ -20,7 +20,7 @@
                   <div class="header-logo__text-status">dentist</div>
                </a>
             </div>
-            <nav class="header__item header-menu">
+            <nav class="header__item header-menu @yield('white')">
                <a class="header-menu__link" href="#why-me">@lang('header.advantages')</a>
                <a class="header-menu__link" href="#service">@lang('header.services')</a>
                <a class="header-menu__link" href="#contacts">@lang('header.contacts')</a>
