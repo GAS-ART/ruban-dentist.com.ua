@@ -1,0 +1,35 @@
+.goals {
+
+   &__body {
+      display: grid;
+      grid-template-columns: minmax(280px, 380px) minmax(280px, 380px);
+      grid-template-rows: auto auto;
+      column-gap: 25px;
+      row-gap: 50px;
+      @media (max-width: $mobile) {
+         grid-template-columns: minmax(280px, 380px);
+         grid-template-rows: auto auto auto auto;
+         row-gap: 30px;
+         column-gap: unset;
+      }
+   }
+
+   &__item {
+      display: flex;
+      align-items: center;
+      picture{
+         padding-right: 20px;
+      }
+   }
+
+   &__text {
+      max-width: 280px;
+      align-items: center;
+   }
+}
+
+.prosthesis{
+   .img-block-two__text{
+      max-width: 380px;
+   }
+}

@@ -7,7 +7,6 @@
 
 
 @section('content')
-
 <section class="service-main-screen">
    <div class="service-main-screen__container">
       <div class="service-main-screen__title">
@@ -825,6 +824,4 @@
       </div>
    </div>
 </section>
-
-
 @endsection

@@ -69,4 +69,20 @@ Route::get('/{locale}', function ($locale) {
             return view('cleaning');
          }
          })->name('cleaning.lang');
-   
+
+         Route::get('/{locale}/prosthesis', function ($locale) {
+            if (! in_array($locale, ['ua', 'ru'])) { 
+         
+               abort(404);
+         
+            } else if ($locale == 'ua') {
+         
+               App::setLocale('ua');
+               return view('prosthesis');
+         
+            } else if ($locale == 'ru') {
+         
+               App::setLocale('ru');
+               return view('prosthesis');
+            }
+            })->name('prosthesis.lang');

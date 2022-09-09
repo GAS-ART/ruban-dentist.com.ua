@@ -2255,6 +2255,39 @@ body.lock {
   }
 }
 
+.goals__body {
+  display: grid;
+  grid-template-columns: minmax(280px, 380px) minmax(280px, 380px);
+  grid-template-rows: auto auto;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+  row-gap: 50px;
+}
+@media (max-width: 47.99875em) {
+  .goals__body {
+    grid-template-columns: minmax(280px, 380px);
+    grid-template-rows: auto auto auto auto;
+    row-gap: 30px;
+    -moz-column-gap: unset;
+         column-gap: unset;
+  }
+}
+.goals__item {
+  display: flex;
+  align-items: center;
+}
+.goals__item picture {
+  padding-right: 20px;
+}
+.goals__text {
+  max-width: 280px;
+  align-items: center;
+}
+
+.prosthesis .img-block-two__text {
+  max-width: 380px;
+}
+
 @supports (margin-bottom: clamp( 1.875rem , 0.4796511628rem  +  6.976744186vw , 5.625rem )) {
   ._margin-big {
     margin-bottom: clamp( 1.875rem , 0.4796511628rem  +  6.976744186vw , 5.625rem );
@@ -2562,6 +2595,18 @@ body.lock {
   background-repeat: no-repeat;
   min-height: 663px;
   margin-bottom: 90px;
+}
+.service-main-screen.prosthesis {
+  background-image: url("/img/prosthesis/main.jpg");
+  background-size: cover;
+}
+@media (max-width: 61.99875em) {
+  .service-main-screen.prosthesis {
+    background-image: unset;
+  }
+}
+.service-main-screen.prosthesis h3 {
+  color: #ffffff;
 }
 .service-main-screen.white {
   background: linear-gradient(104.91deg, #A1C7D4 6.91%, #0680AA 94.44%);

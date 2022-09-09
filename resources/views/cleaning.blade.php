@@ -8,7 +8,6 @@
 
 
 @section('content')
-
 <section class="service-main-screen white">
    <div class="service-main-screen__container">
       <div class="service-main-screen__title">

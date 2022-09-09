@@ -4,7 +4,16 @@
    background-repeat: no-repeat;
    min-height: 663px;
    margin-bottom: 90px;
-   
+   &.prosthesis{
+      background-image: url('/img/prosthesis/main.jpg');
+      background-size: cover;
+      @media (max-width: $tablet) {
+      background-image: unset;
+      }
+      h3{
+         color: #ffffff;
+      }
+   }
    &.white{
       background: linear-gradient(104.91deg, #A1C7D4 6.91%, #0680AA 94.44%);
       .service-main-screen__container{
