@@ -443,6 +443,9 @@ body.lock {
     margin-bottom: 35px;
   }
 }
+.img-block-three__text {
+  line-height: 140%;
+}
 
 .img-block-four {
   display: flex;
