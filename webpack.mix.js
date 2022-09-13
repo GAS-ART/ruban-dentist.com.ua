@@ -19,8 +19,8 @@ mix.browserSync({
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/css/scss/style.scss', 'public/css', [])
     /*.ImageWebp({
-        from: 'public/img/prosthesis',
-        to: 'public/img/prosthesis',
+        from: 'public/img/surgery',
+        to: 'public/img/surgery',
         imageminWebpOptions: {
             quality: 75
         },

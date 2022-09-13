@@ -2431,6 +2431,159 @@ body.lock {
 .pulpitis__stages-content {
   max-width: 480px;
 }
+.surgery-indications__body {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(280px, 380px));
+  grid-template-rows: repeat(3, auto);
+  gap: 55px 20px;
+}
+@media (max-width: 61.99875em) {
+  .surgery-indications__body {
+    grid-template-columns: repeat(2, minmax(280px, 380px));
+    grid-template-rows: repeat(4, auto);
+    justify-content: center;
+  }
+}
+@media (max-width: 47.99875em) {
+  .surgery-indications__body {
+    grid-template-columns: minmax(280px, 380px);
+    grid-template-rows: repeat(8, auto);
+  }
+}
+@media (max-width: 29.99875em) {
+  .surgery-indications__body {
+    gap: 25px 0px;
+  }
+}
+.surgery-indications__item {
+  display: flex;
+  align-items: center;
+}
+.surgery-indications__item picture {
+  margin-right: 20px;
+}
+@media (max-width: 29.99875em) {
+  .surgery-indications__item picture {
+    margin-right: 10px;
+  }
+}
+.surgery-indications__text {
+  max-width: 280px;
+}
+
+.surgery-removal__body {
+  display: flex;
+  margin-bottom: 50px;
+}
+@media (max-width: 47.99875em) {
+  .surgery-removal__body {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+}
+.surgery-removal__row {
+  display: flex;
+  flex-direction: column;
+}
+.surgery-removal__row:not(:last-child) {
+  margin-right: 45px;
+}
+@media (max-width: 61.99875em) {
+  .surgery-removal__row:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+@media (max-width: 50em) {
+  .surgery-removal__row:not(:last-child) {
+    margin-right: 5px;
+  }
+}
+.surgery-removal__row:last-child .surgery-removal__content-text {
+  min-width: unset;
+}
+@media (max-width: 47.99875em) {
+  .surgery-removal__row {
+    width: 355px;
+  }
+  .surgery-removal__row:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 29.99875em) {
+  .surgery-removal__row {
+    width: 285px;
+  }
+}
+.surgery-removal__item {
+  display: flex;
+  align-items: flex-start;
+}
+.surgery-removal__item picture {
+  margin-right: 20px;
+}
+.surgery-removal__item:not(:last-child) {
+  margin-bottom: 50px;
+}
+@media (max-width: 47.99875em) {
+  .surgery-removal__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+.surgery-removal__content-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 135%;
+  color: #1B1D1F;
+  margin-bottom: 10px;
+}
+.surgery-removal__content-text {
+  max-width: 255px;
+  min-width: 183px;
+}
+
+.surgery-eighth__body {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(280px, 380px));
+  grid-template-rows: repeat(2, auto);
+  gap: 55px 20px;
+}
+@media (max-width: 61.99875em) {
+  .surgery-eighth__body {
+    grid-template-columns: repeat(2, minmax(280px, 380px));
+    grid-template-rows: repeat(3, auto);
+    justify-content: center;
+  }
+}
+@media (max-width: 47.99875em) {
+  .surgery-eighth__body {
+    grid-template-columns: minmax(280px, 380px);
+    grid-template-rows: repeat(5, auto);
+  }
+}
+.surgery-eighth__item {
+  display: flex;
+  align-items: center;
+}
+.surgery-eighth__item picture {
+  margin-right: 20px;
+}
+@media (max-width: 61.99875em) {
+  .surgery-eighth__item:last-child {
+    grid-column-start: span 2;
+    justify-self: center;
+  }
+}
+@media (max-width: 47.99875em) {
+  .surgery-eighth__item:last-child {
+    grid-column-start: unset;
+    justify-self: unset;
+  }
+}
+.surgery-eighth__text {
+  max-width: 280px;
+}
+
 /*----POP-UP----*/
 /*----POP-UP----*/
 .popup {
@@ -2607,6 +2760,15 @@ body.lock {
 }
 .service-main-screen.prosthesis h3 {
   color: #ffffff;
+}
+.service-main-screen.surgery {
+  background-image: url("/img/surgery/main.jpg");
+  background-size: cover;
+}
+@media (max-width: 61.99875em) {
+  .service-main-screen.surgery {
+    background-image: unset;
+  }
 }
 .service-main-screen.white {
   background: linear-gradient(104.91deg, #A1C7D4 6.91%, #0680AA 94.44%);

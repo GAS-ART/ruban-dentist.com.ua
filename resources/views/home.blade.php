@@ -118,7 +118,7 @@
                <div class="content-services__text">@lang('home.services.service.text_1')</div>
             </div>
             <div class="content-services__item _tooth _tooth-mobile">
-               <h3 class="content-services__title"><a href="#">@lang('home.services.service.title_2')</a></h3>
+               <h3 class="content-services__title"><a href="{{ route('surgery.lang', ['locale' => __('lang.current')]) }}">@lang('home.services.service.title_2')</a></h3>
                <div class="content-services__text">@lang('home.services.service.text_2')</div>
             </div>
             <div class="content-services__item _tooth _tooth-mobile">

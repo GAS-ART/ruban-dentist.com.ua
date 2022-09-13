@@ -1,0 +1,151 @@
+.surgery-indications {
+
+   &__body {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(280px, 380px));
+      grid-template-rows: repeat(3, auto);
+      gap: 55px 20px;
+      @media (max-width: $tablet) {
+         grid-template-columns: repeat(2, minmax(280px, 380px));
+         grid-template-rows: repeat(4, auto);
+         justify-content: center;
+      }
+      @media (max-width: $mobile) {
+         grid-template-columns: minmax(280px, 380px);
+         grid-template-rows: repeat(8, auto);
+      }
+      @media (max-width: $mobileSmall) {
+         gap: 25px 0px;
+      }
+   }
+
+   &__item {
+      display: flex;
+      align-items: center;
+      picture{
+         margin-right: 20px;
+         @media (max-width: $mobileSmall) {
+         margin-right: 10px;
+         }
+      }
+   }
+
+   &__text {
+      max-width: 280px;
+   }
+}
+
+.surgery-removal {
+
+   &__body {
+      display: flex;
+      margin-bottom: 50px;
+      @media (max-width: $mobile) {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 30px;
+      }
+   }
+
+   &__row {
+      display: flex;
+      flex-direction: column;
+      &:not(:last-child){
+      margin-right: 45px;
+      @media (max-width: $tablet) {
+         margin-right: 20px;
+      }
+      @media (max-width: em(800)) {
+         margin-right: 5px;
+      }
+      }
+      &:last-child{
+         .surgery-removal__content-text{
+            min-width: unset;
+         }
+      }
+      @media (max-width: $mobile) {
+         &:not(:last-child){
+            margin-bottom: 30px;
+         }
+
+      width: 355px;
+      }
+      @media (max-width: $mobileSmall) {
+      width: 285px;
+      }
+   }
+
+   &__item {
+      display: flex;
+      align-items: flex-start;
+      picture{
+         margin-right: 20px;
+      }
+      &:not(:last-child){
+         margin-bottom: 50px;
+         @media (max-width: $mobile) {
+            margin-bottom: 30px;
+         }
+      }
+   }
+
+   &__content {
+   }
+
+   &__content-title {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 135%;
+      color: #1B1D1F;
+      margin-bottom: 10px;
+   }
+
+   &__content-text {
+      max-width: 255px;
+      min-width: 183px;
+   }
+}
+
+.surgery-eighth {
+
+   &__body {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(280px, 380px));
+      grid-template-rows: repeat(2, auto);
+      gap: 55px 20px;
+      @media (max-width: $tablet) {
+         grid-template-columns: repeat(2, minmax(280px, 380px));
+         grid-template-rows: repeat(3, auto);
+         justify-content: center;
+      }
+      @media (max-width: $mobile) {
+         grid-template-columns: minmax(280px, 380px);
+         grid-template-rows: repeat(5, auto);
+      }
+   }
+
+   &__item {
+      display: flex;
+      align-items: center;
+      picture{
+         margin-right: 20px;
+      }
+      @media (max-width: $tablet) {
+         &:last-child{
+            grid-column-start: span 2;
+            justify-self: center;
+         }
+      }
+      @media (max-width: $mobile) {
+         &:last-child{
+            grid-column-start: unset;
+            justify-self: unset;
+         }
+      }
+   }
+
+   &__text {
+      max-width: 280px;
+   }
+}

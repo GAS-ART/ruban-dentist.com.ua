@@ -7,11 +7,19 @@
    &.prosthesis{
       background-image: url('/img/prosthesis/main.jpg');
       background-size: cover;
+
       @media (max-width: $tablet) {
       background-image: unset;
       }
       h3{
          color: #ffffff;
+      }
+   }
+   &.surgery{
+      background-image: url('/img/surgery/main.jpg');
+      background-size: cover;
+      @media (max-width: $tablet) {
+      background-image: unset;
       }
    }
    &.white{
