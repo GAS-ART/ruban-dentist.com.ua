@@ -114,7 +114,7 @@
       <div class="services__body _animate-tooth">
          <div class="services__content content-services">
             <div class="content-services__item _tooth _tooth-mobile">
-               <h3 class="content-services__title"> <a href="#">@lang('home.services.service.title_1')</a></h3>
+               <h3 class="content-services__title"> <a href="{{ route('therapeutic.lang', ['locale' => __('lang.current')]) }}">@lang('home.services.service.title_1')</a></h3>
                <div class="content-services__text">@lang('home.services.service.text_1')</div>
             </div>
             <div class="content-services__item _tooth _tooth-mobile">
@@ -122,7 +122,7 @@
                <div class="content-services__text">@lang('home.services.service.text_2')</div>
             </div>
             <div class="content-services__item _tooth _tooth-mobile">
-               <h3 class="content-services__title"><a href="#">@lang('home.services.service.title_3')</a></h3>
+               <h3 class="content-services__title"><a href="{{ route('cleaning.lang', ['locale' => __('lang.current')]) }}">@lang('home.services.service.title_3')</a></h3>
                <div class="content-services__text">@lang('home.services.service.text_3')</div>
             </div>
          </div>
@@ -137,7 +137,7 @@
          </div>
          <div class="services__content content-services">
             <div class="content-services__item _tooth _tooth-mobile">
-               <h3 class="content-services__title"><a href="#">@lang('home.services.service.title_4')</a></h3>
+               <h3 class="content-services__title"><a href="{{ route('prosthesis.lang', ['locale' => __('lang.current')]) }}">@lang('home.services.service.title_4')</a></h3>
                <div class="content-services__text">@lang('home.services.service.text_4')</div>
             </div>
             <div class="content-services__item _tooth _tooth-mobile">
