@@ -2880,6 +2880,15 @@ body.lock {
     background-image: unset;
   }
 }
+.service-main-screen.pediatrician {
+  background-image: url("/img/pediatrician/main.jpg");
+  background-size: cover;
+}
+@media (max-width: 61.99875em) {
+  .service-main-screen.pediatrician {
+    background-image: unset;
+  }
+}
 .service-main-screen.white {
   background: linear-gradient(104.91deg, #A1C7D4 6.91%, #0680AA 94.44%);
 }

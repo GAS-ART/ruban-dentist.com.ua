@@ -120,3 +120,20 @@ Route::get('/{locale}', function ($locale) {
                      return view('plasmotherapy');
                   }
                   })->name('plasmotherapy.lang');
+
+                  Route::get('/{locale}/pediatrician', function ($locale) {
+                     if (! in_array($locale, ['ua', 'ru'])) { 
+                  
+                        abort(404);
+                  
+                     } else if ($locale == 'ua') {
+                  
+                        App::setLocale('ua');
+                        return view('pediatrician');
+                  
+                     } else if ($locale == 'ru') {
+                  
+                        App::setLocale('ru');
+                        return view('pediatrician');
+                     }
+                     })->name('pediatrician.lang');

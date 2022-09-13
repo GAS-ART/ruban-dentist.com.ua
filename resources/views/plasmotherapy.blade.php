@@ -100,7 +100,7 @@
       </div>
    </div>
 </section>
-<div class="plasmotherapy-plasmotherapy _margin-big">
+<section class="plasmotherapy-plasmotherapy _margin-big">
    <div class="plasmotherapy-plasmotherapy__container">
       <div class="plasmotherapy-plasmotherapy__title _title-block">
          <h2>@lang('plasmotherapy.plasmotherapy.title')</h2>
@@ -110,7 +110,7 @@
          <p>@lang('plasmotherapy.plasmotherapy.title_text_2')</p>
       </div>
    </div>
-</div>
+</section>
 <section class="plasmotherapy-task _margin-big">
    <div class="plasmotherapy-task__container">
       <div class="plasmotherapy-task__title _title-block">
@@ -170,11 +170,11 @@
 </section>
 <section class="plasmotherapy-how">
    <div class="plasmotherapy-how__container">
+      <div class="plasmotherapy-how__kinds-title _title-block">
+         <h2 class="_title">@lang('plasmotherapy.how.title')</h2>
+         <p>@lang('plasmotherapy.how.title_text')</p>
+      </div>
       <div class="plasmotherapy-how__methods">
-         <div class="plasmotherapy-how__kinds-title _title-block">
-            <h2 class="_title">@lang('plasmotherapy.how.title')</h2>
-            <p>@lang('plasmotherapy.how.title_text')</p>
-         </div>
          <div class="plasmotherapy-how__methods-body img-block-two">
             <div class="img-block-two__item">
                <picture>

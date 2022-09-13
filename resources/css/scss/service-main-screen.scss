@@ -30,6 +30,13 @@
       background-image: unset;
       }
    }
+   &.pediatrician{
+      background-image: url('/img/pediatrician/main.jpg');
+      background-size: cover;
+      @media (max-width: $tablet) {
+      background-image: unset;
+      }
+   }
    &.white{
       background: linear-gradient(104.91deg, #A1C7D4 6.91%, #0680AA 94.44%);
       .service-main-screen__container{
