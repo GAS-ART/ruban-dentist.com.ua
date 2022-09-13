@@ -1,0 +1,98 @@
+.plasmotherapy-why {
+
+   &__body {
+      display: flex;
+      @media (max-width: $mobile) {
+       flex-direction: column;
+       align-items: center;
+      }
+   }
+
+   &__row {
+      &:not(:last-child){
+      margin-right: 45px;
+      @media (max-width: $mobile) {
+      margin-right: 0;
+      margin-bottom: 30px;
+      }
+      }
+   }
+
+   &__item {
+      display: flex;
+      picture{
+         margin-right: 20px;
+      }
+      &:not(:last-child){
+         @media (max-width: $mobile) {
+            margin-bottom: 30px;
+         }
+      }
+   }
+
+   &__content {
+   }
+
+   &__content-title {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 135%;
+      color: #1B1D1F;
+      margin-bottom: 10px;
+   }
+
+   &__content-text {
+      max-width: 280px;
+   }
+}
+
+.plasmotherapy-plasmotherapy {
+   &__content {
+      display: flex;
+      @media (max-width: $mobile) {
+      flex-direction: column;
+      align-items: center;
+      }
+      p{
+         max-width: 380px;
+         &:not(:last-child){
+            @include adaptiveValueREM('margin-right', 120, 30, 992, 768, 1);
+            @media (max-width: $mobile) {
+            margin-right: unset;
+            margin-bottom: 20px;
+            }
+            }
+      }
+   }
+}
+
+.plasmotherapy-task {
+
+   &__body {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(280px, 410px));
+      grid-template-rows: repeat(3, auto);
+      column-gap: 25px;
+      row-gap: 50px;
+      @media (max-width: $mobile) {
+         grid-template-columns: minmax(280px, 410px);
+         grid-template-rows: repeat(6, auto);
+         row-gap: 30px;
+         column-gap: 0px;
+         justify-content: center;
+      }
+   }
+
+   &__item {
+      display: flex;
+      align-items: center;
+      picture{
+         padding-right: 20px;
+      }
+   }
+
+   &__text {
+      max-width: 310px;
+   }
+}
+

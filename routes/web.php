@@ -103,3 +103,20 @@ Route::get('/{locale}', function ($locale) {
                   return view('surgery');
                }
                })->name('surgery.lang');
+
+               Route::get('/{locale}/plasmotherapy', function ($locale) {
+                  if (! in_array($locale, ['ua', 'ru'])) { 
+               
+                     abort(404);
+               
+                  } else if ($locale == 'ua') {
+               
+                     App::setLocale('ua');
+                     return view('plasmotherapy');
+               
+                  } else if ($locale == 'ru') {
+               
+                     App::setLocale('ru');
+                     return view('plasmotherapy');
+                  }
+                  })->name('plasmotherapy.lang');

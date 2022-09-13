@@ -2584,6 +2584,106 @@ body.lock {
   max-width: 280px;
 }
 
+.plasmotherapy-why__body {
+  display: flex;
+}
+@media (max-width: 47.99875em) {
+  .plasmotherapy-why__body {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.plasmotherapy-why__row:not(:last-child) {
+  margin-right: 45px;
+}
+@media (max-width: 47.99875em) {
+  .plasmotherapy-why__row:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+.plasmotherapy-why__item {
+  display: flex;
+}
+.plasmotherapy-why__item picture {
+  margin-right: 20px;
+}
+@media (max-width: 47.99875em) {
+  .plasmotherapy-why__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+.plasmotherapy-why__content-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 135%;
+  color: #1B1D1F;
+  margin-bottom: 10px;
+}
+.plasmotherapy-why__content-text {
+  max-width: 280px;
+}
+
+.plasmotherapy-plasmotherapy__content {
+  display: flex;
+}
+@media (max-width: 47.99875em) {
+  .plasmotherapy-plasmotherapy__content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.plasmotherapy-plasmotherapy__content p {
+  max-width: 380px;
+}
+@supports (margin-right: clamp( 1.875rem , -17.4107142857rem  +  40.1785714286vw , 7.5rem )) {
+  .plasmotherapy-plasmotherapy__content p:not(:last-child) {
+    margin-right: clamp( 1.875rem , -17.4107142857rem  +  40.1785714286vw , 7.5rem );
+  }
+}
+@supports not (margin-right: clamp( 1.875rem , -17.4107142857rem  +  40.1785714286vw , 7.5rem )) {
+  .plasmotherapy-plasmotherapy__content p:not(:last-child) {
+    margin-right: calc(
+         1.875rem + 5.625 * (100vw - 48rem) / 14
+      );
+  }
+}
+@media (max-width: 47.99875em) {
+  .plasmotherapy-plasmotherapy__content p:not(:last-child) {
+    margin-right: unset;
+    margin-bottom: 20px;
+  }
+}
+
+.plasmotherapy-task__body {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 410px));
+  grid-template-rows: repeat(3, auto);
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+  row-gap: 50px;
+}
+@media (max-width: 47.99875em) {
+  .plasmotherapy-task__body {
+    grid-template-columns: minmax(280px, 410px);
+    grid-template-rows: repeat(6, auto);
+    row-gap: 30px;
+    -moz-column-gap: 0px;
+         column-gap: 0px;
+    justify-content: center;
+  }
+}
+.plasmotherapy-task__item {
+  display: flex;
+  align-items: center;
+}
+.plasmotherapy-task__item picture {
+  padding-right: 20px;
+}
+.plasmotherapy-task__text {
+  max-width: 310px;
+}
+
 /*----POP-UP----*/
 /*----POP-UP----*/
 .popup {
@@ -2767,6 +2867,16 @@ body.lock {
 }
 @media (max-width: 61.99875em) {
   .service-main-screen.surgery {
+    background-image: unset;
+  }
+}
+.service-main-screen.plasmotherapy {
+  background-image: url("/img/plasmotherapy/main.jpg");
+  background-size: contain;
+  background-color: #CADAEA;
+}
+@media (max-width: 61.99875em) {
+  .service-main-screen.plasmotherapy {
     background-image: unset;
   }
 }

@@ -22,6 +22,14 @@
       background-image: unset;
       }
    }
+   &.plasmotherapy{
+      background-image: url('/img/plasmotherapy/main.jpg');
+      background-size: contain;
+      background-color: #CADAEA;
+      @media (max-width: $tablet) {
+      background-image: unset;
+      }
+   }
    &.white{
       background: linear-gradient(104.91deg, #A1C7D4 6.91%, #0680AA 94.44%);
       .service-main-screen__container{
