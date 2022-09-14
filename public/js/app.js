@@ -37,6 +37,49 @@ window.onload = function () {
   menuBtn.addEventListener('click', function () {
     menuBtn.classList.toggle('open');
     burger.classList.toggle('open');
+  }); //popup animation
+
+  var viberImages = document.querySelector('._viber');
+  var viberBlock = document.querySelector('.popup__viber');
+  var telegramImages = document.querySelector('._telegram');
+  var telegramBlock = document.querySelector('.popup__telegram');
+  var whatsappImages = document.querySelector('._whatsapp');
+  var whatsappBlock = document.querySelector('.popup__watsapp');
+  viberImages.addEventListener('mouseenter', function () {
+    return viberBlock.classList.add('active');
+  });
+  viberImages.addEventListener('mouseleave', function () {
+    return viberBlock.classList.remove('active');
+  });
+  viberBlock.addEventListener('mouseenter', function () {
+    return viberImages.classList.add('active');
+  });
+  viberBlock.addEventListener('mouseleave', function () {
+    return viberImages.classList.remove('active');
+  });
+  telegramImages.addEventListener('mouseenter', function () {
+    return telegramBlock.classList.add('active');
+  });
+  telegramImages.addEventListener('mouseleave', function () {
+    return telegramBlock.classList.remove('active');
+  });
+  telegramBlock.addEventListener('mouseenter', function () {
+    return telegramImages.classList.add('active');
+  });
+  telegramBlock.addEventListener('mouseleave', function () {
+    return telegramImages.classList.remove('active');
+  });
+  whatsappImages.addEventListener('mouseenter', function () {
+    return whatsappBlock.classList.add('active');
+  });
+  whatsappImages.addEventListener('mouseleave', function () {
+    return whatsappBlock.classList.remove('active');
+  });
+  whatsappBlock.addEventListener('mouseenter', function () {
+    return whatsappImages.classList.add('active');
+  });
+  whatsappBlock.addEventListener('mouseleave', function () {
+    return whatsappImages.classList.remove('active');
   }); //logo actions
 
   var logo = document.querySelector('.header-logo__logo');

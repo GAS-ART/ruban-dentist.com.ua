@@ -2713,7 +2713,8 @@ body.lock {
 }
 
 .popup__content {
-  background-color: #46B1DE;
+  background: linear-gradient(100.16deg, #46B1DE 2.65%, #0591CC 96.49%);
+  border-radius: 10px;
   padding: 70px;
   display: flex;
   align-items: center;
@@ -2738,18 +2739,31 @@ body.lock {
   font-size: 20px;
 }
 
+.popup__text-link {
+  margin-bottom: 35px;
+}
+
 .popup__text-link h4 {
   font-weight: 500;
   font-size: 34px;
   color: #fff;
   text-transform: uppercase;
-  margin-bottom: 60px;
   white-space: nowrap;
+  text-align: center;
+  margin-bottom: 10px;
 }
 @media (max-width: 29.99875em) {
   .popup__text-link h4 {
     font-size: 30px;
   }
+}
+
+.popup__text-link p {
+  max-width: 418px;
+  margin: 0 auto;
+  color: #fff;
+  text-align: center;
+  line-height: 1.1875;
 }
 
 .popup__text {
@@ -2778,6 +2792,24 @@ body.lock {
   height: 40px;
   margin: 0 auto 10px auto;
 }
+@media (pointer: fine) {
+  .popup__mesenger-link-img:hover img:first-child {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .popup__mesenger-link-img:hover img:last-child {
+    opacity: 1;
+    visibility: visible;
+  }
+  .popup__mesenger-link-img.active img:first-child {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .popup__mesenger-link-img.active img:last-child {
+    opacity: 1;
+    visibility: visible;
+  }
+}
 .popup__mesenger-link-img img {
   position: absolute;
   top: 0;
@@ -2786,18 +2818,36 @@ body.lock {
   height: 100%;
   -o-object-fit: fill;
      object-fit: fill;
+  transition: all 0.5s ease 0s;
+}
+.popup__mesenger-link-img img:last-child {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .popup__viber {
   padding: 10px 15px;
-  background-color: #7B519D;
-  color: #fff;
-  border-radius: 10px;
+  background-color: #fff;
+  color: #0591CC;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  font-weight: 700;
+  transition: all 0.5s ease 0s;
+  border-radius: 8px;
   margin-right: 15px;
   position: relative;
   white-space: nowrap;
   text-align: center;
   min-width: 205px;
+}
+@media (pointer: fine) {
+  .popup__viber:hover {
+    background-color: #7B519D;
+    color: #fff;
+  }
+  .popup__viber.active {
+    background-color: #7B519D;
+    color: #fff;
+  }
 }
 @media (max-width: 47.99875em) {
   .popup__viber {
@@ -2807,14 +2857,27 @@ body.lock {
 }
 
 .popup__telegram {
-  background-color: #0088CC;
   padding: 10px 15px;
-  color: #fff;
-  border-radius: 10px;
+  background-color: #fff;
+  color: #0591CC;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  font-weight: 700;
+  border-radius: 8px;
+  transition: all 0.5s ease 0s;
   margin-right: 15px;
   white-space: nowrap;
   text-align: center;
   min-width: 205px;
+}
+@media (pointer: fine) {
+  .popup__telegram:hover {
+    background-color: #0088CC;
+    color: #fff;
+  }
+  .popup__telegram.active {
+    background-color: #0088CC;
+    color: #fff;
+  }
 }
 @media (max-width: 47.99875em) {
   .popup__telegram {
@@ -2824,13 +2887,26 @@ body.lock {
 }
 
 .popup__watsapp {
-  background-color: #4DC247;
   padding: 10px 15px;
-  color: #fff;
-  border-radius: 10px;
+  background-color: #fff;
+  color: #0591CC;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  font-weight: 700;
+  border-radius: 8px;
+  transition: all 0.5s ease 0s;
   white-space: nowrap;
   text-align: center;
   min-width: 205px;
+}
+@media (pointer: fine) {
+  .popup__watsapp:hover {
+    background-color: #4DC247;
+    color: #fff;
+  }
+  .popup__watsapp.active {
+    background-color: #4DC247;
+    color: #fff;
+  }
 }
 
 /*----POP-UP-JS----*/

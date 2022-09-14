@@ -28,8 +28,30 @@ window.onload = function () {
       burger.classList.toggle('open');
    });
 
-   //logo actions
+   //popup animation
+   let viberImages = document.querySelector('._viber');
+   let viberBlock = document.querySelector('.popup__viber');
+   let telegramImages = document.querySelector('._telegram');
+   let telegramBlock = document.querySelector('.popup__telegram');
+   let whatsappImages = document.querySelector('._whatsapp');
+   let whatsappBlock = document.querySelector('.popup__watsapp');
 
+   viberImages.addEventListener('mouseenter', () => viberBlock.classList.add('active'));
+   viberImages.addEventListener('mouseleave', () => viberBlock.classList.remove('active'));
+   viberBlock.addEventListener('mouseenter', () => viberImages.classList.add('active'));
+   viberBlock.addEventListener('mouseleave', () => viberImages.classList.remove('active'));
+
+   telegramImages.addEventListener('mouseenter', () => telegramBlock.classList.add('active'));
+   telegramImages.addEventListener('mouseleave', () => telegramBlock.classList.remove('active'));
+   telegramBlock.addEventListener('mouseenter', () => telegramImages.classList.add('active'));
+   telegramBlock.addEventListener('mouseleave', () => telegramImages.classList.remove('active'));
+
+   whatsappImages.addEventListener('mouseenter', () => whatsappBlock.classList.add('active'));
+   whatsappImages.addEventListener('mouseleave', () => whatsappBlock.classList.remove('active'));
+   whatsappBlock.addEventListener('mouseenter', () => whatsappImages.classList.add('active'));
+   whatsappBlock.addEventListener('mouseleave', () => whatsappImages.classList.remove('active'));
+
+   //logo actions
    const logo = document.querySelector('.header-logo__logo');
    const logoText = document.querySelector('.header-logo__text');
    if (window.matchMedia("(pointer: fine)").matches) {
