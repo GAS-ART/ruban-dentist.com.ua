@@ -25,10 +25,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-   <link rel="stylesheet" href="{{asset('css/style.css') . '?_v=4'}}"> 
+   <link rel="stylesheet" href="{{asset('css/style.css') . '?_v=5'}}"> 
 
  <!--   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>-->
-   <script src="{{asset('js/app.js') . '?_v=2'}} "></script>
+   <script src="{{asset('js/app.js') . '?_v=3'}} "></script>
 
    <!-- Global site tag (gtag.js) - Google Analytics -->
 

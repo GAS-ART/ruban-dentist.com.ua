@@ -3162,7 +3162,7 @@ body.lock {
 /*----POP-UP-JS----*/
 .service-main-screen {
   background-image: url("/img/therapeutic/main.jpg");
-  background-position: right;
+  background-size: cover;
   background-repeat: no-repeat;
   min-height: 663px;
   margin-bottom: 90px;
@@ -3190,8 +3190,7 @@ body.lock {
 }
 .service-main-screen.plasmotherapy {
   background-image: url("/img/plasmotherapy/main.jpg");
-  background-size: contain;
-  background-color: #CADAEA;
+  background-size: cover;
 }
 @media (max-width: 61.99875em) {
   .service-main-screen.plasmotherapy {
@@ -3401,6 +3400,14 @@ body.lock {
 .service-main-screen__title h3._animated {
   transform: translate(0, 0);
   opacity: 1;
+}
+.service-main-screen__title h3._white {
+  color: #FFFFFF;
+}
+@media (max-width: 61.99875em) {
+  .service-main-screen__title h3._white {
+    color: #1B1D1F;
+  }
 }
 @media (max-width: 61.99875em) {
   .service-main-screen__title h3 {

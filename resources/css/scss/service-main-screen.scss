@@ -1,6 +1,6 @@
 .service-main-screen {
    background-image: url('/img/therapeutic/main.jpg');
-   background-position: right;
+   background-size: cover;
    background-repeat: no-repeat;
    min-height: 663px;
    margin-bottom: 90px;
@@ -24,8 +24,7 @@
    }
    &.plasmotherapy{
       background-image: url('/img/plasmotherapy/main.jpg');
-      background-size: contain;
-      background-color: #CADAEA;
+      background-size: cover;
       @media (max-width: $tablet) {
       background-image: unset;
       }
@@ -171,6 +170,12 @@
            &._animated {
               transform: translate(0, 0);
               opacity: 1;
+           }
+           &._white{
+            color: #FFFFFF;
+            @media (max-width: $tablet) {
+               color: $mainColor;
+            }
            }
            @media (max-width: $tablet) {
               margin-left: auto;
