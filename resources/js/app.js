@@ -211,5 +211,6 @@ window.onload = function () {
 
    scrolling(/*".pageup"*/);
 
-
+   //footer drop down menu
+   document.querySelector('.contant-footer__menu-services').addEventListener('click', () => document.querySelector('.contant-footer__menu-list').classList.toggle('active'));
 }

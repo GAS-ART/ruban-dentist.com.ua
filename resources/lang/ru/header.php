@@ -1,7 +1,7 @@
 <?php
 
 return [
-   'advantages' => 'Преимущества',
+   'advantages' => 'Главная',
    'services' => 'Услуги',
    'contacts' => 'Контакты',
 ]

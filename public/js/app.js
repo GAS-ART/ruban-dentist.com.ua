@@ -238,7 +238,11 @@ window.onload = function () {
     }
   };
 
-  scrolling();
+  scrolling(); //footer drop down menu
+
+  document.querySelector('.contant-footer__menu-services').addEventListener('click', function () {
+    return document.querySelector('.contant-footer__menu-list').classList.toggle('active');
+  });
 };
 
 /***/ }),
