@@ -21,8 +21,10 @@
                </a>
             </div>
             <nav class="header__item header-menu @yield('white')">
-               <a class="header-menu__link" href="#why-me">@lang('header.advantages')</a>
-               <a class="header-menu__link" href="#service">@lang('header.services')</a>
+               <a class="header-menu__link"
+                  href="{{ route('index.lang', ['locale' => __('lang.current')]) }}">@lang('header.advantages')</a>
+               <button class="header-menu__link _services-menu-btn">@lang('header.services')</button>
+               <!--#service-->
                <a class="header-menu__link" href="#contacts">@lang('header.contacts')</a>
             </nav>
             <div class="header__item header-actions">
@@ -58,6 +60,23 @@
                      </li>
                   </ul>
                </nav>
+            </div>
+            <div class="header__services-menu header-services-menu">
+               <div class="header-services-menu__container">
+                  <a class="header-services-menu__link"
+                     href="{{ route('therapeutic.lang', ['locale' => __('lang.current')]) }}">@lang('home.services.service.title_1')</a>
+                  <a class="header-services-menu__link"
+                     href="{{ route('cleaning.lang', ['locale' => __('lang.current')]) }}">@lang('home.services.service.title_3')</a>
+                  <a class="header-services-menu__link"
+                     href="{{ route('pediatrician.lang', ['locale' => __('lang.current')]) }}">@lang('home.services.service.title_5')</a>
+                  <a class="header-services-menu__link"
+                     href="{{ route('surgery.lang', ['locale' => __('lang.current')]) }}">@lang('home.services.service.title_2')</a>
+                  <a class="header-services-menu__link"
+                     href="{{ route('prosthesis.lang', ['locale' => __('lang.current')]) }}">@lang('home.services.service.title_4')</a>
+                  <a class="header-services-menu__link"
+                     href="{{ route('plasmotherapy.lang', ['locale' => __('lang.current')]) }}">@lang('home.services.service.title_6')</a>
+               </div>
+
             </div>
          </div>
       </div>

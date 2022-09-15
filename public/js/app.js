@@ -17,7 +17,12 @@ window.onload = function () {
   document.addEventListener('click', documentActions);
 
   function documentActions(e) {
-    var target = e.target; //remove burger
+    var target = e.target; //remove hedaer menu
+
+    if (!target.closest('.header-services-menu') && !target.closest('._services-menu-btn')) {
+      headerMenuBody.classList.remove('active');
+    } //remove burger
+
 
     if (!target.closest('.burger') && !target.closest('.icon-menu') || target.classList.contains('menu__link')) {
       menuBtn.classList.remove('open');
@@ -29,8 +34,14 @@ window.onload = function () {
       (0,_modules_popup_js__WEBPACK_IMPORTED_MODULE_0__.popUp)(target.closest('.link-on-popup').dataset.popupId);
       e.preventDefault();
     }
-  } //Menu burger
+  } //open hedaer menu
 
+
+  var headerMenuBtn = document.querySelector('._services-menu-btn');
+  var headerMenuBody = document.querySelector('.header-services-menu');
+  headerMenuBtn.addEventListener('click', function () {
+    return headerMenuBody.classList.toggle('active');
+  }); //Menu burger
 
   var menuBtn = document.querySelector('.icon-menu');
   var burger = document.querySelector('.burger');

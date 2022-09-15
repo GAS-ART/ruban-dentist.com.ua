@@ -7,6 +7,12 @@ window.onload = function () {
 
    function documentActions(e) {
       const target = e.target;
+
+      //remove hedaer menu
+      if (!target.closest('.header-services-menu') && !target.closest('._services-menu-btn')) {
+         headerMenuBody.classList.remove('active');
+      }
+
       //remove burger
       if (!target.closest('.burger') && !target.closest('.icon-menu') || target.classList.contains('menu__link')) {
          menuBtn.classList.remove('open');
@@ -19,6 +25,11 @@ window.onload = function () {
          e.preventDefault();
       }
    }
+
+   //open hedaer menu
+   let headerMenuBtn = document.querySelector('._services-menu-btn');
+   let headerMenuBody = document.querySelector('.header-services-menu');
+   headerMenuBtn.addEventListener('click', () => headerMenuBody.classList.toggle('active'));
 
    //Menu burger
    const menuBtn = document.querySelector('.icon-menu');
