@@ -630,7 +630,7 @@ body.lock {
 }
 .header__wraper {
   position: fixed;
-  height: 85px;
+  height: 105px;
   z-index: 100;
   width: 100%;
   transition: all 0.5s ease 0s;
@@ -670,14 +670,14 @@ body.lock {
   width: 52px;
   height: 54px;
   transition: all 0.3s ease 0s;
-}
-@media (pointer: fine) {
-  .header-logo__logo:hover {
+  /* @media (pointer: fine) {
+    &:hover {
+      transform: rotate(360deg) scale(1.2);
+    }
+   }
+   &.active{
     transform: rotate(360deg) scale(1.2);
-  }
-}
-.header-logo__logo.active {
-  transform: rotate(360deg) scale(1.2);
+   }*/
 }
 .header-logo__logo img {
   position: relative;
@@ -706,25 +706,29 @@ body.lock {
   margin-top: 6px;
   line-height: 140%;
   white-space: nowrap;
+  /*@media (pointer: fine) {
+  &:hover {
+     .header-logo__text-name{
+        opacity: 1;
+        font-size: 1.5rem;
+     }
+     .header-logo__text-status{
+        font-size: 1.5rem;
+     }
+  }
+  }
+  &.active{
+     .header-logo__text-name{
+        opacity: 1;
+        font-size: 1.5rem;
+     }
+     .header-logo__text-status{
+        font-size: 1.5rem;
+     }
+    }*/
 }
 .header-logo__text.white {
   color: #ffffff;
-}
-@media (pointer: fine) {
-  .header-logo__text:hover .header-logo__text-name {
-    opacity: 1;
-    font-size: 1.5rem;
-  }
-  .header-logo__text:hover .header-logo__text-status {
-    font-size: 1.5rem;
-  }
-}
-.header-logo__text.active .header-logo__text-name {
-  opacity: 1;
-  font-size: 1.5rem;
-}
-.header-logo__text.active .header-logo__text-status {
-  font-size: 1.5rem;
 }
 .header-logo__text-name {
   font-family: "Sofia";
@@ -816,8 +820,13 @@ body.lock {
   cursor: default;
   position: relative;
 }
-.header-actions__row:nth-child(3) {
-  top: -2px;
+.header-actions__row:nth-child(2) {
+  top: -3px;
+}
+@media (max-width: 47.99875em) {
+  .header-actions__row:nth-child(2) {
+    display: none;
+  }
 }
 @media (max-width: 61.99875em) {
   .header-actions__row:first-child {
@@ -892,17 +901,18 @@ body.lock {
 }
 
 .header__menu {
-  position: absolute;
+  position: fixed;
   overflow: hidden;
-  right: 0;
-  top: 115px;
+  left: 0;
+  top: 0px;
   width: 100%;
-  height: 135px;
-  background: rgba(70, 177, 222, 0.25);
+  height: 100vh;
+  background: rgba(43, 49, 52, 0.9);
   transform: translate(100%);
-  z-index: 100;
+  margin-right: 20px;
+  z-index: 300;
   transition: transform 0.3s ease 0s;
-  z-index: 0;
+  z-index: 300;
 }
 @media (min-width: 47.99875em) {
   .header__menu {
@@ -917,19 +927,31 @@ body.lock {
 }
 
 .menu__item {
-  color: #46B1DE;
+  color: #ffffff;
   line-height: 1.2;
-  margin-left: 14px;
+  margin-left: 20px;
+  font-size: 20px;
+}
+.menu__item p {
+  margin-bottom: 15px;
 }
 .menu__item:first-child {
-  margin-top: 5px;
+  margin-top: 30px;
 }
 .menu__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+.menu__item .menu__sub-item {
+  font-size: 18px;
+  margin-left: 45px;
+}
+.menu__item .menu__sub-item:not(:last-child) {
   margin-bottom: 15px;
 }
 .icon-menu {
   z-index: 200;
   display: none;
+  z-index: 500;
 }
 @media (max-width: 29.99875em) {
   .icon-menu {
@@ -943,7 +965,8 @@ body.lock {
     position: relative;
     width: 30px;
     height: 18px;
-    top: -15px;
+    top: 0px;
+    margin-left: auto;
     cursor: pointer;
   }
   .icon-menu span, .icon-menu::before, .icon-menu::after {
@@ -1238,7 +1261,8 @@ body.lock {
 }
 .text-main-screen__call {
   color: #ffffff;
-  background-color: #46B1DE;
+  background: linear-gradient(97.59deg, #46B1DE 9.8%, #0591CC 95.1%);
+  box-shadow: 0px 2px 10px #46B1DE;
   border-radius: 8px;
   min-width: 180px;
   min-height: 60px;
@@ -1256,7 +1280,6 @@ body.lock {
 .text-main-screen__service {
   color: #46B1DE;
   background-color: #ffffff;
-  border: 1px solid #1B1D1F;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   margin-right: 16px;
@@ -1282,7 +1305,7 @@ body.lock {
   width: 280px;
   height: 120px;
   background-color: #ffffff;
-  border: 1px solid #1B1D1F;
+  border: 1px solid #D8E1E1;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   transform: translate(-70%, 0);

@@ -28,9 +28,6 @@
                <a class="header-menu__link" href="#contacts">@lang('header.contacts')</a>
             </nav>
             <div class="header__item header-actions">
-               <div class="icon-menu">
-                  <span></span>
-               </div>
                <div class="header-actions__row">
                   <a class="header-actions__phone _icon-phone" href="tel:%2B0956664748">+38 (095) 666-47-48</a>
                </div>
@@ -49,35 +46,63 @@
                         </a>
                      </li>
                      <li class="menu__item">
-                        <a href="#service" class="menu__link">
+                        <p>
                            @lang('header.services')
-                        </a>
+                        <ul class="menu__sub-list">
+                           <li class="menu__sub-item"><a
+                                 href="{{ route('cleaning.lang', ['locale' => __('lang.current')]) }}"
+                                 class="menu__sub-link">@lang('home.services.service.title_3')</a></li>
+                           <li class="menu__sub-item"><a
+                                 href="{{ route('therapeutic.lang', ['locale' => __('lang.current')]) }}"
+                                 class="menu__sub-link">@lang('home.services.service.title_1')</a></li>
+                           <li class="menu__sub-item"><a
+                                 href="{{ route('surgery.lang', ['locale' => __('lang.current')]) }}"
+                                 class="menu__sub-link">@lang('home.services.service.title_2')</a></li>
+                           <li class="menu__sub-item"><a
+                                 href="{{ route('prosthesis.lang', ['locale' => __('lang.current')]) }}"
+                                 class="menu__sub-link">@lang('home.services.service.title_4')</a></li>
+                           <li class="menu__sub-item"><a
+                                 href="{{ route('pediatrician.lang', ['locale' => __('lang.current')]) }}"
+                                 class="menu__sub-link">@lang('home.services.service.title_5')</a></li>
+                           <li class="menu__sub-item"><a
+                                 href="{{ route('plasmotherapy.lang', ['locale' => __('lang.current')]) }}"
+                                 class="menu__sub-link">@lang('home.services.service.title_6')</a></li>
+                        </ul>
+                        </p>
                      </li>
                      <li class="menu__item">
-                        <a href="#contacts" class="menu__link">
+                        <p href="#contacts" class="menu__link">
                            @lang('header.contacts')
-                        </a>
+                           </a>
+                     </li>
+                     <li class="menu__item">
+                        <a class="header-actions__lang" href="{{ route('locale', __('lang.ua')) }}">UA</a>
+                        <span class="header-actions__separator">|</span>
+                        <a class="header-actions__lang" href="{{ route('locale', __('lang.ru')) }}">RU</a>
                      </li>
                   </ul>
                </nav>
             </div>
-            <div class="header__services-menu header-services-menu">
-               <div class="header-services-menu__container">
-                  <a class="header-services-menu__link"
-                     href="{{ route('therapeutic.lang', ['locale' => __('lang.current')]) }}">@lang('home.services.service.title_1')</a>
-                  <a class="header-services-menu__link"
-                     href="{{ route('cleaning.lang', ['locale' => __('lang.current')]) }}">@lang('home.services.service.title_3')</a>
-                  <a class="header-services-menu__link"
-                     href="{{ route('pediatrician.lang', ['locale' => __('lang.current')]) }}">@lang('home.services.service.title_5')</a>
-                  <a class="header-services-menu__link"
-                     href="{{ route('surgery.lang', ['locale' => __('lang.current')]) }}">@lang('home.services.service.title_2')</a>
-                  <a class="header-services-menu__link"
-                     href="{{ route('prosthesis.lang', ['locale' => __('lang.current')]) }}">@lang('home.services.service.title_4')</a>
-                  <a class="header-services-menu__link"
-                     href="{{ route('plasmotherapy.lang', ['locale' => __('lang.current')]) }}">@lang('home.services.service.title_6')</a>
-               </div>
-
+         </div>
+         <div class="icon-menu">
+            <span></span>
+         </div>
+         <div class="header__services-menu header-services-menu">
+            <div class="header-services-menu__container">
+               <a class="header-services-menu__link"
+                  href="{{ route('therapeutic.lang', ['locale' => __('lang.current')]) }}">@lang('home.services.service.title_1')</a>
+               <a class="header-services-menu__link"
+                  href="{{ route('cleaning.lang', ['locale' => __('lang.current')]) }}">@lang('home.services.service.title_3')</a>
+               <a class="header-services-menu__link"
+                  href="{{ route('pediatrician.lang', ['locale' => __('lang.current')]) }}">@lang('home.services.service.title_5')</a>
+               <a class="header-services-menu__link"
+                  href="{{ route('surgery.lang', ['locale' => __('lang.current')]) }}">@lang('home.services.service.title_2')</a>
+               <a class="header-services-menu__link"
+                  href="{{ route('prosthesis.lang', ['locale' => __('lang.current')]) }}">@lang('home.services.service.title_4')</a>
+               <a class="header-services-menu__link"
+                  href="{{ route('plasmotherapy.lang', ['locale' => __('lang.current')]) }}">@lang('home.services.service.title_6')</a>
             </div>
+
          </div>
       </div>
    </div>
