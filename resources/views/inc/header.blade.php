@@ -1,7 +1,9 @@
 @section('header')
 
 <header class="header">
+   
    <div class="header__wraper">
+      <div class="header__background"></div>
       <div class="header__container">
          <div class="header__items">
             <div class="header__item header-logo">

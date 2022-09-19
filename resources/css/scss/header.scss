@@ -5,10 +5,25 @@ top: 0;
 left: 0;
 width: 100%;
 z-index: 100;
+.header__background{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(91.75deg, #A1C7D4 10.71%, #0680AA 90.82%);
+   z-index: -1;
+   opacity: 0;
+   transition: all 0.3s ease 0s;
+}
 &._scroll{
+   .header__background {
+      opacity: 1;
+   }
    .header__wraper{
-      background-color: $paleBlue;
-      background: linear-gradient(91.75deg, #A1C7D4 10.71%, #0680AA 90.82%);
+      //background-color: $paleBlue;
+     // background: linear-gradient(91.75deg, #A1C7D4 10.71%, #0680AA 90.82%);
+
    }
    .header-logo__text-name{
       color: #ffffff;
