@@ -889,6 +889,12 @@ body.lock {
 .header-actions__lang:not(:last-child) {
   margin-right: 7px;
 }
+@media (max-width: 47.99875em) {
+  .header-actions__lang {
+    color: #fff;
+    font-size: 26px;
+  }
+}
 .header-actions__separator {
   line-height: 1.2;
   font-size: 20px;
@@ -898,6 +904,12 @@ body.lock {
   color: #000000;
   cursor: default;
   transition: color 0.3s ease 0s;
+}
+@media (max-width: 47.99875em) {
+  .header-actions__separator {
+    color: #fff;
+    font-size: 26px;
+  }
 }
 
 .header__menu {
@@ -924,29 +936,36 @@ body.lock {
   transform: translate(0);
   opacity: 1;
   visibility: visible;
+  overflow-y: auto;
 }
 
 .menu__item {
   color: #ffffff;
   line-height: 1.2;
   margin-left: 20px;
-  font-size: 20px;
+  font-size: 26px;
 }
 .menu__item p {
   margin-bottom: 15px;
 }
 .menu__item:first-child {
-  margin-top: 30px;
+  margin-top: 60px;
+}
+.menu__item:first-child a._current-page-home {
+  color: #46B1DE;
 }
 .menu__item:not(:last-child) {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 .menu__item .menu__sub-item {
-  font-size: 18px;
+  font-size: 22px;
   margin-left: 45px;
 }
 .menu__item .menu__sub-item:not(:last-child) {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
+}
+.menu__item .menu__sub-link._current-page-prosthesis, .menu__item .menu__sub-link._current-page-cleaning, .menu__item .menu__sub-link._current-page-pediatrician, .menu__item .menu__sub-link._current-page-plasmotherapy, .menu__item .menu__sub-link._current-page-surgery, .menu__item .menu__sub-link._current-page-therapeutic {
+  color: #126dc2;
 }
 .icon-menu {
   z-index: 200;
@@ -989,14 +1008,17 @@ body.lock {
   }
   .icon-menu.open span {
     transform: scale(0);
+    background-color: #fff;
   }
   .icon-menu.open::before {
     transform: rotate(-45deg);
     top: calc(50% - 1px);
+    background-color: #fff;
   }
   .icon-menu.open::after {
     transform: rotate(45deg);
     bottom: calc(50% - 1px);
+    background-color: #fff;
   }
 }
 
@@ -1073,6 +1095,9 @@ body.lock {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+.header-services-menu__link._current-page-prosthesis, .header-services-menu__link._current-page-cleaning, .header-services-menu__link._current-page-pediatrician, .header-services-menu__link._current-page-plasmotherapy, .header-services-menu__link._current-page-surgery, .header-services-menu__link._current-page-therapeutic {
+  color: #46B1DE;
 }
 @media (pointer: fine) {
   .header-services-menu__link {
@@ -2094,11 +2119,29 @@ body.lock {
   color: #0F2D4A;
   font-size: 20px;
   line-height: 135%;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  transition: all 0.3s ease 0s;
+}
+.contant-footer__menu > a._current-page-home {
+  color: #126dc2;
+}
+@media (pointer: fine) {
+  .contant-footer__menu > a:hover {
+    color: #ffffff;
+  }
 }
 .contant-footer__menu button {
   color: #0F2D4A;
   font-size: 20px;
   line-height: 135%;
+  transition: all 0.3s ease 0s;
+}
+@media (pointer: fine) {
+  .contant-footer__menu button:hover {
+    color: #ffffff;
+  }
 }
 @media (max-width: 47.99875em) {
   .contant-footer__menu {
@@ -2195,6 +2238,9 @@ body.lock {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+.contant-footer__menu-link._current-page-prosthesis, .contant-footer__menu-link._current-page-cleaning, .contant-footer__menu-link._current-page-pediatrician, .contant-footer__menu-link._current-page-plasmotherapy, .contant-footer__menu-link._current-page-surgery, .contant-footer__menu-link._current-page-therapeutic {
+  color: #126dc2;
 }
 @media (max-width: 47.99875em) {
   .contant-footer__menu-link {

@@ -5,6 +5,7 @@
 @section('ogDescription', __('titles.home.ogDescription'))
 @section('ogUrl', __('titles.home.ogUrl'))
 @section('white', 'white')
+@section('cleaning', '_current-page-cleaning')
 
 
 @section('content')

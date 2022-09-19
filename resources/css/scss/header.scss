@@ -268,7 +268,8 @@ z-index: 100;
       margin-right: 7px;
    }
    @media (max-width: $mobile) {
-      
+      color: #fff;
+      font-size: 26px;
    }
 }
    &__separator{
@@ -280,6 +281,10 @@ z-index: 100;
       color: #000000;
       cursor: default;
       transition: color 0.3s ease 0s;
+      @media (max-width: $mobile) {
+            color: #fff;
+            font-size: 26px;
+      }
    }
    
 }
@@ -312,6 +317,7 @@ z-index: 100;
          transform: translate(0);
          opacity: 1;
          visibility: visible;
+         overflow-y: auto;
       }
    }
 }
@@ -328,22 +334,41 @@ z-index: 100;
       color: #ffffff;;
       line-height: 1.2;
       margin-left: 20px;
-      font-size: 20px;
+      font-size: 26px;
       p{
          margin-bottom: 15px;
       }
       &:first-child{
-         margin-top: 30px;
+         margin-top: 60px;
+         a{
+            &._current-page-home {
+               color: $blue;
+            }
+         }
+         
       }
       &:not(:last-child){
-      margin-bottom: 15px;
+      margin-bottom: 30px;
+      }
+      .menu__sub-list{
+         
       }
       .menu__sub-item{
-         font-size: 18px;
+         font-size: 22px;
          margin-left: 45px;
          &:not(:last-child){
-            margin-bottom: 15px;
+            margin-bottom: 25px;
          }
+      }
+      .menu__sub-link{
+         &._current-page-prosthesis,
+         &._current-page-cleaning,
+         &._current-page-pediatrician,
+         &._current-page-plasmotherapy,
+         &._current-page-surgery,
+         &._current-page-therapeutic {
+         color: #126dc2;
+      }
       }
    }
 
@@ -395,14 +420,17 @@ z-index: 100;
 		&.open  {
 			span {
 				transform: scale(0);
+            background-color: #fff;
 			}
 			&::before {
 				transform: rotate(-45deg);
 				top: calc(50% - 1px);
+            background-color: #fff
 			}
 			&::after {
 				transform: rotate(45deg);
 				bottom: calc(50% - 1px);
+            background-color: #fff
 			}
 		}
 	}
@@ -462,6 +490,14 @@ z-index: 100;
       white-space: nowrap;
       position: relative;
       width: fit-content;
+      &._current-page-prosthesis,
+      &._current-page-cleaning,
+      &._current-page-pediatrician,
+      &._current-page-plasmotherapy,
+      &._current-page-surgery,
+      &._current-page-therapeutic {
+         color: $blue;
+      }
       @media (pointer: fine) {
          transition: all 0.3s ease 0s;
          &:after{

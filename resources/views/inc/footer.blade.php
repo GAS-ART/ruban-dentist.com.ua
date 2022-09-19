@@ -19,27 +19,34 @@
             <div class="content-footer__text">
 
                <div class="contant-footer__menu">
-                  <a href="{{ route('index.lang', ['locale' => __('lang.current')]) }}">@lang('header.advantages')</a>
+                  <a href="{{ route('index.lang', ['locale' => __('lang.current')]) }}"
+                     class="@yield('main')">@lang('header.advantages')</a>
                   <button class="contant-footer__menu-services">@lang('header.services')</button>
                   <ul class="contant-footer__menu-list">
                      <li class="contant-footer__menu-item"><a
                            href="{{ route('therapeutic.lang', ['locale' => __('lang.current')]) }}"
-                           class="contant-footer__menu-link">@lang('home.services.service.title_1')</a></li>
+                           class="contant-footer__menu-link @yield('therapeutic')">@lang('home.services.service.title_1')</a>
+                     </li>
                      <li class="contant-footer__menu-item"><a
                            href="{{ route('surgery.lang', ['locale' => __('lang.current')]) }}"
-                           class="contant-footer__menu-link">@lang('home.services.service.title_2')</a></li>
+                           class="contant-footer__menu-link @yield('surgery')">@lang('home.services.service.title_2')</a>
+                     </li>
                      <li class="contant-footer__menu-item"><a
                            href="{{ route('cleaning.lang', ['locale' => __('lang.current')]) }}"
-                           class="contant-footer__menu-link">@lang('home.services.service.title_3')</a></li>
+                           class="contant-footer__menu-link @yield('cleaning')">@lang('home.services.service.title_3')</a>
+                     </li>
                      <li class="contant-footer__menu-item"><a
                            href="{{ route('prosthesis.lang', ['locale' => __('lang.current')]) }}"
-                           class="contant-footer__menu-link">@lang('home.services.service.title_4')</a></li>
+                           class="contant-footer__menu-link @yield('prosthesis')">@lang('home.services.service.title_4')</a>
+                     </li>
                      <li class="contant-footer__menu-item"><a
                            href="{{ route('pediatrician.lang', ['locale' => __('lang.current')]) }}"
-                           class="contant-footer__menu-link">@lang('home.services.service.title_5')</a></li>
+                           class="contant-footer__menu-link @yield('pediatrician')">@lang('home.services.service.title_5')</a>
+                     </li>
                      <li class="contant-footer__menu-item"><a
                            href="{{ route('plasmotherapy.lang', ['locale' => __('lang.current')]) }}"
-                           class="contant-footer__menu-link">@lang('home.services.service.title_6')</a></li>
+                           class="contant-footer__menu-link @yield('plasmotherapy')">@lang('home.services.service.title_6')</a>
+                     </li>
                   </ul>
                </div>
                <div class="contant-footer__working-hours">

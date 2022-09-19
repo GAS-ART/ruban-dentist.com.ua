@@ -69,16 +69,32 @@
 
    &__menu {
       & > a {
-         display: block;
-         margin-bottom: 20px;
-         color: #0F2D4A;
-        font-size: 20px;
-        line-height: 135%;
+      display: block;
+      margin-bottom: 20px;
+      color: #0F2D4A;
+      font-size: 20px;
+      line-height: 135%;
+      max-width: fit-content;
+      transition: all 0.3s ease 0s;
+         &._current-page-home{
+            color: #126dc2;
+         }
+         @media (pointer: fine) {
+            &:hover {
+               color: #ffffff;
+            }
+         }
       }
-       button{
-        color: #0F2D4A;
-        font-size: 20px;
-        line-height: 135%;
+      button {
+      color: #0F2D4A;
+      font-size: 20px;
+      line-height: 135%;
+      transition: all 0.3s ease 0s;
+         @media (pointer: fine) {
+            &:hover {
+               color: #ffffff;
+            }
+         }
       }
       @media (max-width: $mobile) {
       margin-bottom: 20px;
@@ -179,6 +195,15 @@
       line-height: 135%;
       margin-left: 20px;
       width: fit-content;
+      
+      &._current-page-prosthesis,
+      &._current-page-cleaning,
+      &._current-page-pediatrician,
+      &._current-page-plasmotherapy,
+      &._current-page-surgery,
+      &._current-page-therapeutic {
+         color: #126dc2;
+      }
       @media (max-width: $mobile) {
       margin-left: 0px;
       }

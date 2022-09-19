@@ -6,6 +6,7 @@
 @section('ogUrl', __('titles.home.ogUrl'))
 
 @section('page', 'home')
+@section('main', '_current-page-home')
 
 
 @section('content')

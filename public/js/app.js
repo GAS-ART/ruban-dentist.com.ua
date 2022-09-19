@@ -27,6 +27,7 @@ window.onload = function () {
     if (!target.closest('.burger') && !target.closest('.icon-menu') || target.classList.contains('menu__link')) {
       menuBtn.classList.remove('open');
       burger.classList.remove('open');
+      burger.classList.remove('lock');
     } //popUp
 
 
@@ -43,11 +44,13 @@ window.onload = function () {
     return headerMenuBody.classList.toggle('active');
   }); //Menu burger
 
+  var body = document.querySelector('body');
   var menuBtn = document.querySelector('.icon-menu');
   var burger = document.querySelector('.burger');
   menuBtn.addEventListener('click', function () {
     menuBtn.classList.toggle('open');
     burger.classList.toggle('open');
+    body.classList.toggle('lock');
   }); //popup animation
 
   var viberImages = document.querySelector('._viber');

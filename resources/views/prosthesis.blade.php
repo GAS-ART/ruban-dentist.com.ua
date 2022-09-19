@@ -5,6 +5,8 @@
 @section('ogDescription', __('titles.home.ogDescription'))
 @section('ogUrl', __('titles.home.ogUrl'))
 
+@section('prosthesis', '_current-page-prosthesis')
+
 @section('content')
 <section class="service-main-screen prosthesis">
    <div class="service-main-screen__container">

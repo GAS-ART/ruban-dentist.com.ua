@@ -5,6 +5,8 @@
 @section('ogDescription', __('titles.home.ogDescription'))
 @section('ogUrl', __('titles.home.ogUrl'))
 
+@section('therapeutic', '_current-page-therapeutic')
+
 
 @section('content')
 <section class="service-main-screen">

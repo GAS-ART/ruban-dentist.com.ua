@@ -41,7 +41,7 @@
                <nav class="menu__body">
                   <ul class="menu__list">
                      <li class="menu__item">
-                        <a href="#why-me" class="menu__link">
+                        <a href="{{ route('index.lang', ['locale' => __('lang.current')]) }}" class="menu__link @yield('main')">
                            @lang('header.advantages')
                         </a>
                      </li>
@@ -51,29 +51,30 @@
                         <ul class="menu__sub-list">
                            <li class="menu__sub-item"><a
                                  href="{{ route('cleaning.lang', ['locale' => __('lang.current')]) }}"
-                                 class="menu__sub-link">@lang('home.services.service.title_3')</a></li>
+                                 class="menu__sub-link @yield('cleaning')">@lang('home.services.service.title_3')</a></li>
                            <li class="menu__sub-item"><a
                                  href="{{ route('therapeutic.lang', ['locale' => __('lang.current')]) }}"
-                                 class="menu__sub-link">@lang('home.services.service.title_1')</a></li>
+                                 class="menu__sub-link @yield('therapeutic')">@lang('home.services.service.title_1')</a></li>
                            <li class="menu__sub-item"><a
                                  href="{{ route('surgery.lang', ['locale' => __('lang.current')]) }}"
-                                 class="menu__sub-link">@lang('home.services.service.title_2')</a></li>
+                                 class="menu__sub-link @yield('surgery')">@lang('home.services.service.title_2')</a></li>
                            <li class="menu__sub-item"><a
                                  href="{{ route('prosthesis.lang', ['locale' => __('lang.current')]) }}"
-                                 class="menu__sub-link">@lang('home.services.service.title_4')</a></li>
+                                 class="menu__sub-link @yield('prosthesis')">@lang('home.services.service.title_4')</a></li>
                            <li class="menu__sub-item"><a
                                  href="{{ route('pediatrician.lang', ['locale' => __('lang.current')]) }}"
-                                 class="menu__sub-link">@lang('home.services.service.title_5')</a></li>
+                                 class="menu__sub-link @yield('pediatrician')">@lang('home.services.service.title_5')</a></li>
                            <li class="menu__sub-item"><a
                                  href="{{ route('plasmotherapy.lang', ['locale' => __('lang.current')]) }}"
-                                 class="menu__sub-link">@lang('home.services.service.title_6')</a></li>
+                                 class="menu__sub-link @yield('plasmotherapy')">@lang('home.services.service.title_6')</a></li>
                         </ul>
                         </p>
                      </li>
                      <li class="menu__item">
                         <p href="#contacts" class="menu__link">
-                           @lang('header.contacts')
+                              @lang('header.contacts')
                            </a>
+                           
                      </li>
                      <li class="menu__item">
                         <a class="header-actions__lang" href="{{ route('locale', __('lang.ua')) }}">UA</a>
@@ -89,17 +90,22 @@
          </div>
          <div class="header__services-menu header-services-menu">
             <div class="header-services-menu__container">
-               <a class="header-services-menu__link"
+               <a class="header-services-menu__link @yield('therapeutic')"
                   href="{{ route('therapeutic.lang', ['locale' => __('lang.current')]) }}">@lang('home.services.service.title_1')</a>
-               <a class="header-services-menu__link"
+
+               <a class="header-services-menu__link @yield('cleaning')"
                   href="{{ route('cleaning.lang', ['locale' => __('lang.current')]) }}">@lang('home.services.service.title_3')</a>
-               <a class="header-services-menu__link"
+
+               <a class="header-services-menu__link @yield('pediatrician')"
                   href="{{ route('pediatrician.lang', ['locale' => __('lang.current')]) }}">@lang('home.services.service.title_5')</a>
-               <a class="header-services-menu__link"
+
+               <a class="header-services-menu__link @yield('surgery')"
                   href="{{ route('surgery.lang', ['locale' => __('lang.current')]) }}">@lang('home.services.service.title_2')</a>
-               <a class="header-services-menu__link"
+
+               <a class="header-services-menu__link @yield('prosthesis')"
                   href="{{ route('prosthesis.lang', ['locale' => __('lang.current')]) }}">@lang('home.services.service.title_4')</a>
-               <a class="header-services-menu__link"
+
+               <a class="header-services-menu__link @yield('plasmotherapy')"
                   href="{{ route('plasmotherapy.lang', ['locale' => __('lang.current')]) }}">@lang('home.services.service.title_6')</a>
             </div>
 
