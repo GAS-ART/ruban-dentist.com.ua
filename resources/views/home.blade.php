@@ -153,7 +153,7 @@
       </div>
    </div>
 </section>
-<section class="consultation">
+<section class="consultation _margin-big">
    <div class="consultation__container">
       <div class="consultation__body">
          <div class="consultation__item">

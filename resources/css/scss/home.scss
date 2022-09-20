@@ -16,7 +16,7 @@
    }
    &__container{
       display: flex;
-      justify-content: flex-start;
+      justify-content: center;
       @media (max-width: $mobile) {
          flex-direction: column;
          align-items: center;
@@ -205,9 +205,6 @@
       &:not(:last-child){
          @include adaptiveValueREM('margin-right', 70, 20, 1180, 768, 1)
       }
-      &:first-child{
-         @include adaptiveValueREM('margin-left', 102, 0, 1180, 768, 1)
-      }
       &:nth-child(2){
          .cards-main-screen__text{
             max-width: 114px;
@@ -244,7 +241,7 @@
 
 /*===============WHY-ME================*/
 .why-me {
-   margin-bottom: 60px;
+   margin-bottom: 90px;
    @media (max-width: $mobile) {
       margin-bottom: 30px;
    }
@@ -362,7 +359,7 @@
 
 /*===============SERVICES================*/
 .services {
-   margin-bottom: 85px;
+   margin-bottom: 115px;
    @media (max-width: em(1050)) {
       margin-bottom: 60px;
    }
@@ -380,7 +377,7 @@
       span{
          color: $blue;
       }
-      margin-bottom: 60px;
+      margin-bottom: 50px;
       @media (max-width: em(1050)) {
          margin-bottom: 110px;
       }
@@ -394,9 +391,21 @@
          text-align: right;
          .content-services__item:first-child{
             margin-right: 65px;
+            .content-services__text{
+               min-width: 370px;
+               @media (max-width: em(1050)) {
+                  min-width: unset;
+               }
+            }
          }
          .content-services__item:nth-child(2){
             margin-right: 130px;
+            .content-services__text{
+               min-width: 355px;
+               @media (max-width: em(1050)) {
+                  min-width: unset;
+               }
+            }
          }
          .content-services__item:last-child{
             margin-right: 35px;
@@ -470,6 +479,7 @@
             }
          }
          .content-services__item:last-child{
+
             opacity: 0;
             transform: translate(-50%, 80%);
             @media (max-width: em(1050)) {
@@ -487,7 +497,7 @@
          }
       }
       &:last-child{
-
+         min-height: 342px;
          .content-services__item:first-child{
             opacity: 0;
             transform: translate(50%, -80%);
@@ -754,6 +764,7 @@
       padding: 29px 42.5px;
       background-color: $blue;
       color: #ffffff;
+      border-radius: 8px;
       @media (max-width: em(349)) {
          padding: 19px 22.5px;
       }
@@ -764,7 +775,7 @@
 
 /*===============IMAGES================*/
 .images {
-margin-bottom: 60px;
+margin-bottom: 90px;
 @media (max-width: $mobile) {
    margin-bottom: 30px;
 }
