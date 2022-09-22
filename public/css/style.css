@@ -713,8 +713,6 @@ body.lock {
 }
 .header-logo__text {
   color: #46B1DE;
-  margin-top: 6px;
-  line-height: 140%;
   white-space: nowrap;
   /*@media (pointer: fine) {
   &:hover {
@@ -824,6 +822,17 @@ body.lock {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+}
+@media (max-width: 47.99875em) {
+  .header-actions {
+    margin-top: 29px;
+    justify-content: unset;
+  }
+}
+@media (max-width: 22.8125em) {
+  .header-actions ._icon-phone::before {
+    display: none;
   }
 }
 .header-actions__row {
@@ -1367,8 +1376,14 @@ body.lock {
   max-width: 114px;
 }
 @media (max-width: 47.99875em) {
+  .cards-main-screen__card:nth-child(2) .cards-main-screen__text {
+    max-width: 146px;
+  }
+}
+@media (max-width: 47.99875em) {
   .cards-main-screen__card {
     transition: all 0.8s ease 0s;
+    justify-content: center;
   }
   .cards-main-screen__card:not(:last-child) {
     margin-right: 0px;
@@ -1394,6 +1409,14 @@ body.lock {
     font-size: calc(
          2.1875rem + 1.875 * (100vw - 20rem) / 53.75
       );
+  }
+}
+@media (max-width: 47.99875em) {
+  .cards-main-screen__number {
+    margin-left: 0;
+    margin-right: 20px;
+    min-width: 69px;
+    text-align: center;
   }
 }
 .cards-main-screen__text {
@@ -1501,6 +1524,11 @@ body.lock {
   }
 }
 @media (max-width: 47.99875em) {
+  .me-advantages__card {
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
   .me-advantages__card:not(:last-child) {
     margin-bottom: 20px;
     margin-right: 0px;
@@ -1522,6 +1550,11 @@ body.lock {
   font-size: 18px;
   font-weight: 700;
   line-height: 1.166;
+}
+@media (max-width: 47.99875em) {
+  .card-advantage__text {
+    max-width: 211px;
+  }
 }
 .card-advantage__content {
   line-height: 1.1875;

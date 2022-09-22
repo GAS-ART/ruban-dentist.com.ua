@@ -174,7 +174,7 @@ window.onload = function () {
    //scroll to services
    const scrolling = (selectorBtn) => {
       //const btnUp = document.querySelector(selectorBtn);
-      const links = document.querySelectorAll("[href^='#']");
+      const links = document.querySelectorAll("[href='#contacts']");
       let speed = 0.3;
       const headerHeight = document.querySelector('.header__wraper').offsetHeight;
 
@@ -210,7 +210,6 @@ window.onload = function () {
                         : Math.min(widthTop + progress / speed, widthTop + toBlock);
 
                let element = document.documentElement || document.body;
-               console.log(r != widthTop + toBlock);
                element.scrollTo(0, r);
 
                if (r != widthTop + toBlock) {

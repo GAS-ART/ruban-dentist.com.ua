@@ -212,7 +212,7 @@ window.onload = function () {
 
   var scrolling = function scrolling(selectorBtn) {
     //const btnUp = document.querySelector(selectorBtn);
-    var links = document.querySelectorAll("[href^='#']");
+    var links = document.querySelectorAll("[href='#contacts']");
     var speed = 0.3;
     var headerHeight = document.querySelector('.header__wraper').offsetHeight;
     /*window.addEventListener("scroll", () => {
@@ -240,7 +240,6 @@ window.onload = function () {
           var progress = time - start,
               r = toBlock < 0 ? Math.max(widthTop - progress / speed, widthTop + toBlock) : Math.min(widthTop + progress / speed, widthTop + toBlock);
           var element = document.documentElement || document.body;
-          console.log(r != widthTop + toBlock);
           element.scrollTo(0, r);
 
           if (r != widthTop + toBlock) {
