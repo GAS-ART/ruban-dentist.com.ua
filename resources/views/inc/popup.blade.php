@@ -22,7 +22,7 @@
                      class="popup__mesenger-img" src="{{asset('img/icons/telegram_white.png')}}"
                      alt="Записть на прием к стоматолгу через telegram"><img class="popup__mesenger-img"
                      src="{{asset('img/icons/telegram_blue.png')}}" alt="Записть на прием к стоматолгу через telegram"></a>
-               <a class="popup__telegram" href="tg://resolve?domain=">@lang('popup.telegram')</a>
+               <a class="popup__telegram" href="tg://resolve?domain=DR_Tanya_Ruban">@lang('popup.telegram')</a>
             </div>
 
             <div class="popup__mesenger">

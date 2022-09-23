@@ -25,11 +25,18 @@ window.onload = function () {
          popUp(target.closest('.link-on-popup').dataset.popupId);
          e.preventDefault();
       }
+
+      //stopScroling
+      if (!target.classList.contains('.ancor') && scroling == true) {
+         body.addEventListener('click', stopAnimation);
+      }
+
    }
 
    //open hedaer menu
    let headerMenuBtn = document.querySelector('._services-menu-btn');
    let headerMenuBody = document.querySelector('.header-services-menu');
+   let scroling = false;
    headerMenuBtn.addEventListener('click', () => headerMenuBody.classList.toggle('active'));
 
    //Menu burger
@@ -172,8 +179,11 @@ window.onload = function () {
 
 
    //scroll to services
+   let stop = false;
+   function stopAnimation() { stop = true; }
    const scrolling = (selectorBtn) => {
       //const btnUp = document.querySelector(selectorBtn);
+
       const links = document.querySelectorAll("[href='#contacts']");
       let speed = 0.3;
       const headerHeight = document.querySelector('.header__wraper').offsetHeight;
@@ -189,20 +199,24 @@ window.onload = function () {
       for (let i = 0; i < links.length; i++) {
          links[i].addEventListener("click", function (event) {
             event.preventDefault();
-
+            body.classList.remove('lock');
             let widthTop = Math.round(
                document.documentElement.scrollTop || document.body.scrollTop
             ),
-               hash = this.hash,
-               toBlock = document.querySelector(hash).getBoundingClientRect().top - headerHeight,
-               start = null;
+               hash = this.hash;
+            let toBlock = document.querySelector(hash).getBoundingClientRect().top - headerHeight;
+            let start = null;
+
             requestAnimationFrame(step);
 
+            scroling = true;
+
             function step(time) {
+
+
                if (start === null) {
                   start = time;
                }
-
                let progress = time - start,
                   r =
                      toBlock < 0
@@ -212,9 +226,12 @@ window.onload = function () {
                let element = document.documentElement || document.body;
                element.scrollTo(0, r);
 
-               if (r != widthTop + toBlock) {
+               if (r != widthTop + toBlock && !stop) {
                   requestAnimationFrame(step);
                } else {
+                  body.removeEventListener('click', stopAnimation);
+                  stop = false;
+                  scroling = false
                   // location.hash = hash;
                }
             }

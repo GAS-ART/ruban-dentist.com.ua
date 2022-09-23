@@ -34,12 +34,18 @@ window.onload = function () {
     if (target.closest('.link-on-popup')) {
       (0,_modules_popup_js__WEBPACK_IMPORTED_MODULE_0__.popUp)(target.closest('.link-on-popup').dataset.popupId);
       e.preventDefault();
+    } //stopScroling
+
+
+    if (!target.classList.contains('.ancor') && scroling == true) {
+      body.addEventListener('click', stopAnimation);
     }
   } //open hedaer menu
 
 
   var headerMenuBtn = document.querySelector('._services-menu-btn');
   var headerMenuBody = document.querySelector('.header-services-menu');
+  var scroling = false;
   headerMenuBtn.addEventListener('click', function () {
     return headerMenuBody.classList.toggle('active');
   }); //Menu burger
@@ -210,6 +216,12 @@ window.onload = function () {
   } //scroll to services
 
 
+  var stop = false;
+
+  function stopAnimation() {
+    stop = true;
+  }
+
   var scrolling = function scrolling(selectorBtn) {
     //const btnUp = document.querySelector(selectorBtn);
     var links = document.querySelectorAll("[href='#contacts']");
@@ -226,11 +238,13 @@ window.onload = function () {
     for (var i = 0; i < links.length; i++) {
       links[i].addEventListener("click", function (event) {
         event.preventDefault();
+        body.classList.remove('lock');
         var widthTop = Math.round(document.documentElement.scrollTop || document.body.scrollTop),
-            hash = this.hash,
-            toBlock = document.querySelector(hash).getBoundingClientRect().top - headerHeight,
-            start = null;
+            hash = this.hash;
+        var toBlock = document.querySelector(hash).getBoundingClientRect().top - headerHeight;
+        var start = null;
         requestAnimationFrame(step);
+        scroling = true;
 
         function step(time) {
           if (start === null) {
@@ -242,9 +256,12 @@ window.onload = function () {
           var element = document.documentElement || document.body;
           element.scrollTo(0, r);
 
-          if (r != widthTop + toBlock) {
+          if (r != widthTop + toBlock && !stop) {
             requestAnimationFrame(step);
-          } else {// location.hash = hash;
+          } else {
+            body.removeEventListener('click', stopAnimation);
+            stop = false;
+            scroling = false; // location.hash = hash;
           }
         }
       });

@@ -66,7 +66,7 @@
             <div class="contacts-footer__name">@lang('footer.name')</div>
             <div class="contacts-footer__address">@lang('footer.address')</div>
             <div class="contacts-footer__phone"><a class="contacts-footer__phone-link _icon-phone1"
-                  href="tel:%2B0956664748">@lang('footer.phone')</a></div>
+                  href="tel:%2B380956664748">@lang('footer.phone')</a></div>
             <div class="contacts-footer__mesengers">
 
                <a class="contacts-footer__mesengers-viber" href="viber://chat?number=%2B380956664748">
