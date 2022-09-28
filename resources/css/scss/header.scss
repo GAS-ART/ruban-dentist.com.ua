@@ -184,7 +184,7 @@ z-index: 100;
 .header-menu {
    margin-top: 37px;
    &.white{
-      a{
+      a, button{
          color: #fff;
       }
    }
@@ -209,6 +209,11 @@ z-index: 100;
 .header-actions {
    z-index: 200;
    margin-top: 37px;
+   &.white{
+      a,span{
+         color: #ffffff;
+      }
+   }
    @media (max-width: $tablet) {
       display: flex;
       flex-direction: column;

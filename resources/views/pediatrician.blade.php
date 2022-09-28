@@ -1,9 +1,9 @@
 @extends('layout')
-@section('title', __('titles.home.title'))
-@section('description', __('titles.home.description'))
-@section('ogTitle', __('titles.home.ogTitle'))
-@section('ogDescription', __('titles.home.ogDescription'))
-@section('ogUrl', __('titles.home.ogUrl'))
+@section('title', __('titles.pediatrician.title'))
+@section('description', __('titles.pediatrician.description'))
+@section('ogTitle', __('titles.pediatrician.ogTitle'))
+@section('ogDescription', __('titles.pediatrician.ogDescription'))
+@section('ogUrl', __('titles.pediatrician.ogUrl'))
 
 @section('pediatrician', '_current-page-pediatrician')
 

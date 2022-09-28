@@ -778,7 +778,7 @@ body.lock {
 .header-menu {
   margin-top: 37px;
 }
-.header-menu.white a {
+.header-menu.white a, .header-menu.white button {
   color: #fff;
 }
 @media (max-width: 47.99875em) {
@@ -815,6 +815,9 @@ body.lock {
 .header-actions {
   z-index: 200;
   margin-top: 37px;
+}
+.header-actions.white a, .header-actions.white span {
+  color: #ffffff;
 }
 @media (max-width: 61.99875em) {
   .header-actions {

@@ -1,9 +1,9 @@
 @extends('layout')
-@section('title', __('titles.home.title'))
-@section('description', __('titles.home.description'))
-@section('ogTitle', __('titles.home.ogTitle'))
-@section('ogDescription', __('titles.home.ogDescription'))
-@section('ogUrl', __('titles.home.ogUrl'))
+@section('title', __('titles.prosthesis.title'))
+@section('description', __('titles.prosthesis.description'))
+@section('ogTitle', __('titles.prosthesis.ogTitle'))
+@section('ogDescription', __('titles.prosthesis.ogDescription'))
+@section('ogUrl', __('titles.prosthesis.ogUrl'))
 
 @section('prosthesis', '_current-page-prosthesis')
 

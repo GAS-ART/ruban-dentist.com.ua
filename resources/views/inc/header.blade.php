@@ -29,7 +29,7 @@
                <!--#service-->
                <a class="header-menu__link" href="#contacts">@lang('header.contacts')</a>
             </nav>
-            <div class="header__item header-actions">
+            <div class="header__item header-actions @yield('white')">
                <div class="header-actions__row">
                   <a class="header-actions__phone _icon-phone" href="tel:%2B380956664748">+38 (095) 666-47-48</a>
                </div>

@@ -1,9 +1,9 @@
 @extends('layout')
-@section('title', __('titles.home.title'))
-@section('description', __('titles.home.description'))
-@section('ogTitle', __('titles.home.ogTitle'))
-@section('ogDescription', __('titles.home.ogDescription'))
-@section('ogUrl', __('titles.home.ogUrl'))
+@section('title', __('titles.plasmotherapy.title'))
+@section('description', __('titles.plasmotherapy.description'))
+@section('ogTitle', __('titles.plasmotherapy.ogTitle'))
+@section('ogDescription', __('titles.plasmotherapy.ogDescription'))
+@section('ogUrl', __('titles.plasmotherapy.ogUrl'))
 
 @section('plasmotherapy', '_current-page-plasmotherapy')
 
