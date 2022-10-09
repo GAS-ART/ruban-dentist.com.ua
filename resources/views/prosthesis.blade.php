@@ -69,7 +69,7 @@
          <h2>@lang('prosthesis.kinds.title')</h2>
       </div>
       <div class="caries__title _title-block">
-         <h2>@lang('prosthesis.kinds.fixed.title')</h2>
+         <h2>@lang('prosthesis.kinds.removable.title')</h2>
          <p>@lang('prosthesis.kinds.removable.text')</p>
       </div>
       <div class="periodontitis__removable-body img-block-two">

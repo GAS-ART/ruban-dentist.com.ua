@@ -79,7 +79,7 @@
                <a class="contacts-footer__mesengers-telegram" href="tg://resolve?domain=DR_Tanya_Ruban">
                   <img class="contacts-footer__mesengers-img" src="{{asset('img/icons/telegram_white.png')}}"
                      alt="Записть на прием к стоматолгу через telegram">
-                  <img class="contacts-footer__mesengers-img" src="{{asset('img/icons/telegram_blue.png')}}"
+                  <img class="contacts-footer__mesengers-img" src="{{asset('img/icons/telegram_blue-white.png')}}"
                      alt="Записть на прием к стоматолгу через telegram">
                </a>
 

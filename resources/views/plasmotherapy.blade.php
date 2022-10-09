@@ -84,7 +84,7 @@
                </picture>
                <div class="plasmotherapy-why__content">
                   <div class="plasmotherapy-why__content-title">@lang('plasmotherapy.why.img_title_5')</div>
-                  <div class="plasmotherapy-why__content-text">@lang('plasmotherapy.why.img_text_6')</div>
+                  <div class="plasmotherapy-why__content-text">@lang('plasmotherapy.why.img_text_5')</div>
                </div>
             </div>
             <div class="plasmotherapy-why__item">

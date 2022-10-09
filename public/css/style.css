@@ -336,6 +336,7 @@ body.lock {
 }
 .attention__text {
   max-width: 990px;
+  line-height: 140%;
 }
 .attention__text.min {
   max-width: 595px;
@@ -399,6 +400,9 @@ body.lock {
     margin-right: unset;
     margin-bottom: 35px;
   }
+}
+.img-block-two__text {
+  line-height: 140%;
 }
 
 .img-block-three {
@@ -492,6 +496,9 @@ body.lock {
 }
 .img-block-four__item {
   max-width: 280px;
+}
+.img-block-four__item .img-block__text {
+  line-height: 140%;
 }
 @media (max-width: 76.25em) {
   .img-block-four__item {
@@ -587,6 +594,7 @@ body.lock {
 }
 .icon-three__text {
   max-width: 280px;
+  line-height: 140%;
 }
 
 .header {
@@ -2440,8 +2448,8 @@ body.lock {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   transition: all 0.8s ease 0s;
 }
 .contacts-footer__mesengers a img:last-child {
@@ -2648,6 +2656,10 @@ body.lock {
     text-align: center;
   }
 }
+.content-cleaning-kinds__text {
+  line-height: 140%;
+}
+
 .recommendation__content {
   display: grid;
   grid-template-columns: repeat(3, 280px);
@@ -2685,17 +2697,45 @@ body.lock {
     grid-template-rows: repeat(6, auto);
   }
 }
+.recommendation__item {
+  /* picture{
+      position: relative;
+      img{
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         max-height: 280px;
+      }
+   }*/
+}
 .recommendation__item .recommendation__title {
   white-space: nowrap;
+}
+.recommendation__item img {
+  max-height: 120px;
 }
 @media (max-width: 61.99875em) {
   .recommendation__title {
     text-align: center;
   }
 }
+.recommendation__text {
+  line-height: 140%;
+}
 @media (max-width: 61.99875em) {
   .recommendation__text {
     text-align: center;
+  }
+}
+
+.hygiene__body .img-block-three__title {
+  min-width: 317px;
+}
+@media (max-width: 29.99875em) {
+  .hygiene__body .img-block-three__title {
+    min-width: unset;
   }
 }
 
@@ -2792,6 +2832,17 @@ body.lock {
     grid-row: repeat(6, auto);
   }
 }
+.caries__middle-title {
+  width: 312px;
+}
+.caries__middle-text {
+  line-height: 140%;
+}
+
+.caries__find-body .img-block-three__title {
+  width: 305px;
+}
+
 .pulpitis__reasons-body {
   display: grid;
   grid-template-columns: repeat(2, minmax(280px, 480px));
@@ -2828,6 +2879,10 @@ body.lock {
 .pulpitis__reasons-item picture {
   margin-right: 20px;
 }
+.pulpitis__reasons-text {
+  line-height: 140%;
+}
+
 .pulpitis__stages-body {
   display: flex;
 }
@@ -2875,6 +2930,10 @@ body.lock {
 .pulpitis__stages-content {
   max-width: 480px;
 }
+.pulpitis__stages-text {
+  line-height: 140%;
+}
+
 .surgery-indications__body {
   display: grid;
   grid-template-columns: repeat(3, minmax(280px, 380px));
@@ -3052,6 +3111,9 @@ body.lock {
 .plasmotherapy-why__item picture {
   margin-right: 20px;
 }
+.plasmotherapy-why__item:not(:last-child) {
+  margin-bottom: 50px;
+}
 @media (max-width: 47.99875em) {
   .plasmotherapy-why__item:not(:last-child) {
     margin-bottom: 30px;
@@ -3079,6 +3141,7 @@ body.lock {
 }
 .plasmotherapy-plasmotherapy__content p {
   max-width: 380px;
+  line-height: 140%;
 }
 @supports (margin-right: clamp( 1.875rem , -17.4107142857rem  +  40.1785714286vw , 7.5rem )) {
   .plasmotherapy-plasmotherapy__content p:not(:last-child) {

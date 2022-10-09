@@ -29,10 +29,19 @@
    }
 
    &__middle-item {
-
+      
+   }
+   &__middle-title{
+      width: 312px;
    }
 
    &__middle-text {
+      line-height: 140%;
+   }
+}
+.caries__find-body{
+   .img-block-three__title{
+      width: 305px;
    }
 }
 
@@ -67,6 +76,7 @@
    }
 
    &__reasons-text {
+      line-height: 140%;
    }
 }
 
@@ -112,6 +122,7 @@
    }
 
    &__stages-text {
+      line-height: 140%;
    }
 }
 

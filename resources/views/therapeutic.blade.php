@@ -148,6 +148,19 @@
             </div>
          </div>
       </div>
+      <div class="caries__diagnostics">
+      <div class="caries__diagnostics-title">
+            <h2 class="_title">@lang('therapeutic.caries.caries_diagnostics.title')</h2>
+         </div>
+         <div class="caries__diagnostics attention">
+         <div class="attention__img">
+            <img src="{{asset('/img/attention.jpg')}}" alt="">
+         </div>
+         <div class="attention__text min">
+            @lang('therapeutic.caries.caries_diagnostics.attention')
+         </div>
+      </div>
+      </div>
       <div class="caries__find _margin-big">
          <div class="caries__find-title">
             <h2 class="_title">@lang('therapeutic.caries.caries_tipes.title')</h2>
@@ -653,16 +666,16 @@
                <div class="icon-three__item">
                   <picture>
                      <source type="image/webp"
-                        srcset="{{asset('img/therapeutic/periodontitis/classification/2.webp')}}">
-                     <source srcset="{{asset('img/therapeutic/pulpitis/classification/2.jpg')}}">
-                     <img src="{{asset('img/therapeutic/pulpitis/classification/2.jpg')}}" alt="">
+                        srcset="{{asset('img/therapeutic/periodontitis/classification/3.webp')}}">
+                     <source srcset="{{asset('img/therapeutic/pulpitis/classification/3.jpg')}}">
+                     <img src="{{asset('img/therapeutic/pulpitis/classification/3.jpg')}}" alt="">
                   </picture>
                   <div class="periodontitis__classification-content">
                      <div class="icon-three__title _title-icon">
-                        @lang('therapeutic.periodontitis.classification.img_title_2')
+                        @lang('therapeutic.periodontitis.classification.img_title_3')
                      </div>
                      <div class="icon-three__text">
-                        @lang('therapeutic.periodontitis.classification.img_text_2')</div>
+                        @lang('therapeutic.periodontitis.classification.img_text_3')</div>
                   </div>
                </div>
             </div>
@@ -703,16 +716,16 @@
                </div>
                <div class="icon-three__item">
                   <picture>
-                     <source type="image/webp" srcset="{{asset('img/therapeutic/periodontitis/forms/2.webp')}}">
-                     <source srcset="{{asset('img/therapeutic/pulpitis/forms/2.jpg')}}">
-                     <img src="{{asset('img/therapeutic/pulpitis/forms/2.jpg')}}" alt="">
+                     <source type="image/webp" srcset="{{asset('img/therapeutic/periodontitis/forms/3.webp')}}">
+                     <source srcset="{{asset('img/therapeutic/pulpitis/forms/3.jpg')}}">
+                     <img src="{{asset('img/therapeutic/pulpitis/forms/3.jpg')}}" alt="">
                   </picture>
                   <div class="periodontitis__forms-content">
                      <div class="icon-three__title _title-icon">
-                        @lang('therapeutic.periodontitis.forms.img_title_2')
+                        @lang('therapeutic.periodontitis.forms.img_title_3')
                      </div>
                      <div class="icon-three__text">
-                        @lang('therapeutic.periodontitis.forms.img_text_2')</div>
+                        @lang('therapeutic.periodontitis.forms.img_text_3')</div>
                   </div>
                </div>
             </div>
@@ -754,16 +767,16 @@
             </div>
             <div class="icon-three__item">
                <picture>
-                  <source type="image/webp" srcset="{{asset('img/therapeutic/periodontitis/kinds/2.webp')}}">
-                  <source srcset="{{asset('img/therapeutic/pulpitis/kinds/2.jpg')}}">
-                  <img src="{{asset('img/therapeutic/pulpitis/kinds/2.jpg')}}" alt="">
+                  <source type="image/webp" srcset="{{asset('img/therapeutic/periodontitis/kinds/3.webp')}}">
+                  <source srcset="{{asset('img/therapeutic/pulpitis/kinds/3.jpg')}}">
+                  <img src="{{asset('img/therapeutic/pulpitis/kinds/3.jpg')}}" alt="">
                </picture>
                <div class="periodontitis__kinds-content">
                   <div class="icon-three__title _title-icon">
-                     @lang('therapeutic.periodontitis.kinds.img_title_2')
+                     @lang('therapeutic.periodontitis.kinds.img_title_3')
                   </div>
                   <div class="icon-three__text">
-                     @lang('therapeutic.periodontitis.kinds.img_text_2')</div>
+                     @lang('therapeutic.periodontitis.kinds.img_text_3')</div>
                </div>
             </div>
          </div>

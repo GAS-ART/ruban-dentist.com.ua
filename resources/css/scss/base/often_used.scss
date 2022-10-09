@@ -80,6 +80,7 @@ margin: 20px 0 5px 0;
       }
       &__text {
          max-width: 990px;
+         line-height: 140%;
          &.min{
             max-width: 595px;
          }
@@ -116,6 +117,9 @@ margin: 20px 0 5px 0;
                margin-bottom: 35px;
                }
             }
+         }
+         &__text{
+            line-height: 140%;
          }
       }
 
@@ -169,6 +173,9 @@ flex-direction: column;
 
    &__item {
       max-width: 280px;
+      .img-block__text{
+         line-height: 140%;
+      }
       @media (max-width: em(1220)) {
          max-width: unset;
          width: 480px;
@@ -251,6 +258,7 @@ align-items: center;
 
    &__text {
       max-width: 280px;
+      line-height: 140%;
    }
 }
 

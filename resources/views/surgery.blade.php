@@ -28,6 +28,9 @@
          <h2>@lang('surgery.indications.title')</h2>
          <p>@lang('surgery.indications.title_text')</p>
       </div>
+      <div class="surgery-indications__title _title-block">
+         <h2>@lang('surgery.indications.title_2')</h2>
+      </div>
       <div class="surgery-indications__body">
          <div class="surgery-indications__item">
             <picture>
