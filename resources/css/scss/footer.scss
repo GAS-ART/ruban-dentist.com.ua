@@ -169,7 +169,7 @@
          opacity: 1;
          visibility: visible;
          @media (max-width: $mobile) {
-            height: 285px;
+            height: 305px;
          }
             
             li:first-child{
@@ -204,7 +204,7 @@
             }
          
          @media (max-width: em(345)) {
-            height: 305px;
+            height: 325px;
          }
       }
    }

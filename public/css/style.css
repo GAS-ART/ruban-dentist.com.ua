@@ -2277,7 +2277,7 @@ body.lock {
 }
 @media (max-width: 47.99875em) {
   .contant-footer__menu-list.active {
-    height: 285px;
+    height: 305px;
   }
 }
 .contant-footer__menu-list.active li:first-child {
@@ -2312,7 +2312,7 @@ body.lock {
 }
 @media (max-width: 21.5625em) {
   .contant-footer__menu-list.active {
-    height: 305px;
+    height: 325px;
   }
 }
 .contant-footer__lang {
