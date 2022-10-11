@@ -19,7 +19,7 @@
             <img src="{{asset('/img/pediatrician/main_mob.jpg')}}" alt="@lang('pediatrician.main_screen.alt')">
          </picture>
          <h3 class="_animate">@lang('pediatrician.main_screen.text')</h3>
-         <a href="tel:%2B0956664748" class="_animate">@lang('pediatrician.main_screen.call')</a>
+         <a href="tel:%2B380956664748" class="_animate">@lang('pediatrician.main_screen.call')</a>
       </div>
    </div>
 </section>

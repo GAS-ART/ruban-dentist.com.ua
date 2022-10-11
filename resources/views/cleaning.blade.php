@@ -15,7 +15,7 @@
          <h1 class="_animate">@lang('cleaning.main_screen.title')</h1>
 
          <h3 class="_animate">@lang('cleaning.main_screen.text')</h3>
-         <a href="tel:%2B0956664748" class="_animate">@lang('cleaning.main_screen.call')</a>
+         <a href="tel:%2B380956664748" class="_animate">@lang('cleaning.main_screen.call')</a>
          <picture class="__animated">
             <source type="image/webp" srcset="{{asset('/img/cleaning/main_mob.webp')}}">
             <source srcset="{{asset('/img/cleaning/main_mob.jpg')}}">
