@@ -1792,6 +1792,10 @@ body.lock {
   position: relative;
   top: -15px;
 }
+.services__img img {
+  position: relative;
+  left: -5.5px;
+}
 .services__img::before {
   content: "";
   position: absolute;

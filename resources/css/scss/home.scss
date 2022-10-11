@@ -562,6 +562,10 @@
      // margin-right: 155px;
       position: relative;
       top: -15px;
+      img{
+         position: relative;
+         left: -5.5px;
+      }
       &::before{
          content: '';
          position: absolute;
