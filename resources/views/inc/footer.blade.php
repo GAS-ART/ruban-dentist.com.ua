@@ -48,6 +48,11 @@
                            class="contant-footer__menu-link @yield('plasmotherapy')">@lang('home.services.service.title_6')</a>
                      </li>
                   </ul>
+                  <div class="contant-footer__lang">
+                     <a class="contant-footer__lang-link" href="{{ route('locale', __('lang.ua')) }}">UA</a>
+                     <span class="contant-footer__separator">|</span>
+                     <a class="contant-footer__lang-link" href="{{ route('locale', __('lang.ru')) }}">RU</a>
+                  </div>
                </div>
                <div class="contant-footer__working-hours">
                   <div class="contant-footer__working-hours-title">
@@ -60,13 +65,13 @@
 
             </div>
 
+
+
          </div>
          <div class="footer__contacts contacts-footer">
             <div class="contacts-footer__title">@lang('footer.contacts')</div>
             <div class="contacts-footer__name">@lang('footer.name')</div>
             <div class="contacts-footer__address">@lang('footer.address')</div>
-            <div class="contacts-footer__phone"><a class="contacts-footer__phone-link _icon-phone1"
-                  href="tel:%2B380956664748">@lang('footer.phone')</a></div>
             <div class="contacts-footer__mesengers">
 
                <a class="contacts-footer__mesengers-viber" href="viber://chat?number=%2B380956664748">
@@ -91,10 +96,16 @@
                </a>
 
             </div>
-            <div class="contacts-footer__social">
-               <a class="contacts-footer__social-link _icon-instagram" href="https://www.instagram.com/dr.ruban.t.v/"
-                  target="_blank">dr.ruban.t.v</a>
+            <div class="contacts-footer__contact">
+               <div class="contacts-footer__phone">
+                  <a class="contacts-footer__phone-link _icon-phone1" href="tel:%2B380956664748">@lang('footer.phone')</a>
+               </div>
+               <div class="contacts-footer__social">
+                  <a class="contacts-footer__social-link _icon-instagram" href="https://www.instagram.com/dr.ruban.t.v/"
+                     target="_blank">dr.ruban.t.v</a>
+               </div>
             </div>
+            
          </div>
       </div>
       <div class="contact-footer__copiright"><span>©</span> Copyright 2022</div>

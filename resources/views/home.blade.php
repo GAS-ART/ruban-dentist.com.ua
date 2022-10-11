@@ -21,7 +21,7 @@
                      <div class="text-main-screen__text _animate">@lang('home.main_screen.text')</div>
                   </div>
                   <div class="text-main-screen__buttons _animate">
-                     <a class="text-main-screen__call" href="tel:%2B0956664748">@lang('home.main_screen.call')</a>
+                     <a class="text-main-screen__call" href="tel:%2B380956664748">@lang('home.main_screen.call')</a>
                      <a class="text-main-screen__service" href="#service">@lang('home.main_screen.service')</a>
                   </div>
                </div>

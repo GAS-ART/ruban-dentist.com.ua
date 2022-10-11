@@ -3,9 +3,9 @@
 return [
    'title' => 'Запись на приём',
    'text' => 'Напишите пожалуйста Ваше имя и номер телефона. Врач ответит  Вам когда освободится',
-   'viber' => 'Записаться в viber',
-   'telegram' => 'Записаться в telegram',
-   'whatsapp' => 'Записаться в whatsapp',
+   'viber' => 'Записаться в Viber',
+   'telegram' => 'Записаться в Telegram',
+   'whatsapp' => 'Записаться в Whatsapp',
 ]
 
 ?>
