@@ -1965,6 +1965,18 @@ body.lock {
       );
   }
 }
+.content-services__title a {
+  border-bottom: 2px solid #46B1DE;
+}
+@media (pointer: fine) {
+  .content-services__title a {
+    transition: all 0.3s ease 0s;
+  }
+  .content-services__title a:hover {
+    color: #126dc2;
+    border-bottom-color: #126dc2;
+  }
+}
 .content-services__text {
   line-height: 19px;
 }

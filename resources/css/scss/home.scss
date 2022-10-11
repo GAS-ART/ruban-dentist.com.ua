@@ -712,6 +712,21 @@
       margin-bottom: 5px;
       white-space: nowrap;
       text-transform: uppercase;
+      
+      a{
+       //  text-decoration: 2px underline solid $blue;
+       border-bottom: 2px solid $blue;
+       @media (pointer: fine) {
+         transition: all 0.3s ease 0s;
+       &:hover {
+        //color: darken($color: $blue, $amount: 15);
+        color: #126dc2;
+        //border-bottom: 2px solid darken($color: $blue, $amount: 15);
+        border-bottom-color: #126dc2;
+       }
+       }
+      }
+      
    }
 
    &__text {
